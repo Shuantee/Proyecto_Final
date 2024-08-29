@@ -55,13 +55,15 @@
 </section>
 <section class="contenido2">
 	<h2>Vaso de leche</h2>
-	<p>imagen...</p>
+	<div class="fotoVaso">
+		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721727/miproyecto/wbssonvbrggvrsw3gzk9.jpg" alt="foto" class="foto">
+		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721568/miproyecto/ykswvqg5cffn1dzzafu8.jpg" alt="foto" class="foto">
+	</div>
 	<p>
 		Bienvenidos al vaso de leche, en este lugar lo que buscamos es darle un alimento ligero a los
 		estudiantes con el cual se sientan a gusto, en este lugar obtienen bebidas lácteas variadas,
 		tambien hay frutas, y comidas como panes que ayudan a un balance en el alimento de los
-		estudiantes blablablablablablabla bla bla blaaaaaaaaaaaaaaaaaaaaa...
-	</p>
+		estudiantes.
 	<p>
 		Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eveniet numquam perferendis,
 		possimus nobis soluta, eligendi veritatis fugit sed libero eos, vel recusandae molestiae
@@ -73,11 +75,15 @@
 <br />
 <section class="contenido2">
 	<h2>complemento</h2>
+	<br>
+	<div class="fotoComp">
+		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721327/miproyecto/ullpwk1n9izaqzhl2s0m.jpg" alt="imagen" class="foto">
+		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721443/miproyecto/umptturspkmfowpqqnb2.jpg" alt="fotis" class="fotos">
+	</div>
 	<p>
 		En el complemento preparado los estudiantes obtienen comidas balanceadas para el desarrollo de
 		los estudiantes a lo largo de su etapa estudiantil, en este lugar, se les da una comida
-		balanceada en azucares, y calorias, todo para cuidar a los estudiantes bla bla bla bla
-		blaaaaaaaaaaaaaaaaaaaaaaa...
+		balanceada en azucares, y calorias, todo para cuidar a los estudiantes.
 	</p>
 	<p>
 		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi in molestiae cupiditate quam
@@ -264,6 +270,20 @@
 		margin: 35px;
 	}
 
+	.contenido2 img{
+	    width: 160px;
+		height: 150px;
+		border-radius: 40%;
+		position: relative;
+		font-size: 25px;
+	}	
+	.contenido2 .fotoVaso img{
+		width: 155px;
+		height: 160px;
+		border-radius: 30%;
+		position: relative;
+		font-size: 20px;
+	}
 	.contenido2 p {
 		font-size: 34;
 		margin: 20px 350px;
