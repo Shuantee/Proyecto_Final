@@ -15,11 +15,8 @@
 				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 				<ul class="menu-horizontal">
-<<<<<<< HEAD:src/routes/inicio_pagina/+page.svelte
+					
 					<li><a href="#">Inicio</a></li>
-=======
-					<li><a href="/inicio">Inicioa</a></li>
->>>>>>> dba6bd0c2d075b7a46b70de63d9ddc34720e089e:src/routes/+page.svelte
 					<li><a href="#">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
