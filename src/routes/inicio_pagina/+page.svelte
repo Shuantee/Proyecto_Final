@@ -313,11 +313,6 @@
 		.barras #menu-icono:hover{
 			background: rgba(255, 255, 255, 0.596);
 		}
-
-		#menu-icono.active{
-			padding-left: 0px;
-			display: flex;
-		}
 		
 	}
 
