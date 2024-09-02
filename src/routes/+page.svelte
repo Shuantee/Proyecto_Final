@@ -1,4 +1,4 @@
-<a href=""> mira mi queja</a>
+
 <header class="encabezado">
 
 	<div class="contenedor_menu">
