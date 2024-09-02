@@ -247,74 +247,17 @@
 		width: 50%;
 		font-size: 36px;
 		font-weight: 600;
+		color:white;
 	}
 	.cover .text p{
 		width: 50%;
 		font-size: 18px;
 		margin-top: 40px;
+		color: yellow;
 	}
 	
-	@media screen and (max-width:1200px){
-		.encabezado{
-			padding:40px;
-		}
-	}
-	@media screen and (max-width:720px){
-		.barras nav{
-			position: fixed;
-			top:0;
-			right: -250px;
-			background: white;
-			width: 250px;
-			height: 100vh;
-			padding: 40px;
-			z-index: 1;
-		}
-
-		.barras .menu-horizontal{
-			flex-direction: column;
-			margin-top: 40px;
-		}
-		.barras .menu-horizontal li{
-			margin-top: 30px;
-			margin-left: 0;
-		}
-
-		.barras .menu-horizontal li a{
-			color: #7e0000;
-		}
-		.barras  nav img{
-			display: block;
-			width: 85%;
-		}
-
-		#back_menu{
-			position: fixed;
-			top: 0;
-			left: 0;
-			width:100%;
-			height: 100vh;
-			background: rgba(0, 0, 0, 0.5);
-			display: none;
-		}
-
-		.barras #menu-icono{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 50px;
-			height: 50px;
-			background: rgba(255,255,255,0.1);
-			font-size: 24px;
-			border-radius: 50px;
-			cursor: pointer;
-			transition: all 300ms;
-		}
-		.barras #menu-icono:hover{
-			background: rgba(255, 255, 255, 0.596);
-		}
-		
-	}
+	
+	
 
 
 	/*otra cosa*/
