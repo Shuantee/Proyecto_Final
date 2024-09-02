@@ -1,35 +1,43 @@
+<a href=""> mira mi queja</a>
 <header class="encabezado">
-	<nav class="menu">
-		<div>
-			<img
-				src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo"
-				class="logo"
-			/>
+
+	<div class="contenedor_menu">
+		<div class="logo">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
+				alt="logo">
 		</div>
 
-		<div class="barra">
-			<ul class="menu-horizontal">
-				<li><a href="#">Inicio</a></li>
-				<li>
-					<a href="esole.html">inscripción</a>
+		<div class="barras">
+			<div id="back_menu"></div>
+			<nav>
+				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
+				alt="logo">
+				<ul class="menu-horizontal">
+					<li><a href="/inicio">Inicio</a></li>
+					<li><a href="#">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
 					</ul>
-				</li>
-				<li><a href="Inicia_sesión.html">Inicia sesión</a></li>
-				<li><a href="quejas.html">Quejas</a></li>
-			</ul>
-		</div>
-	</nav>
-	<br />
-	<br />
-	<div class="header-contenido container">
-		<div class="header-txt">
-			<h1>REFRIGERIOS LOLA</h1>
-			<p>(RL)</p>
+				    </li>
+				    <li><a href="">Inicia sesión</a></li>
+				    <li><a href="/quejas">Quejas</a></li>
+			    </ul>
+			</nav>
 		</div>
 	</div>
+
+	<br />
+	<br />
+	<main>
+		<div class="contenedor-cover">
+			<div class="cover">
+				<div class="text">
+					<h1>REFRIGERIOS LOLA</h1>
+					<p>(RL)</p>
+		        </div>
+		    </div>
+	    </div>
+    </main>
 </header>
 <br />
 <br />
@@ -134,7 +142,9 @@
 	</div>
 </footer>
 
+
 <style>
+	
 	* {
 		margin: 0;
 		padding: 0;
@@ -147,55 +157,66 @@
 		font-family: 'Franklin Gothic Book';
 		background-color: rgb(228, 233, 183);
 	}
-
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
 		min-height: 55vh;
-		background-position: center center;
+		background-position: center center ;
 		background-repeat: no-repeat;
 		background-size: cover;
-		display: flex;
 		align-items: center;
-	}
-	.encabezado .menu {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
+		padding: 40px;
+		z-index: 1;
+		}
+
+	.contenedor_menu{ 
+		max-width: 1200px;
+		height: 100%;
+		margin: auto;
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 	}
-	.encabezado .menu {
+	.logo{
+		height:100px;
 		display: flex;
-		justify-content: space-around;
+		align-items: center;
 	}
-
-	.encabezado .logo {
+	.logo img {
 		width: 95px;
 		border-radius: 60%;
 		position: relative;
 		font-size: 25px;
 	}
 
-	.encabezado .menu .menu-horizontal {
+	.barras {
+		display: flex;
+		align-items: center;
+	}
+
+	.barras .menu-horizontal {
 		display: flex;
 		justify-content: space-between;
 	}
+	.barras .menu-horizontal li{
+		margin-left: 36px;
+	}
 
-	.encabezado a {
-		font-size: 20px;
+	.barras .menu-horizontal li a {
+		font-size: 16px;
 		color: white;
-		padding: 12px 20px;
+		margin-left: 36px;
 		display: block;
+		text-transform: uppercase;
 	}
 
+	.barras nav img{
+		display: none;
+	}
 	.encabezado li:hover {
-		background: rgb(0, 41, 80);
+		background: rgb(0, 41, 80); 
 	}
 
-	.encabezado .menu-vertical {
+	.barras .menu-horizontal .menu-vertical {
 		position: absolute;
 		display: none;
 		width: 200px;
@@ -205,23 +226,94 @@
 	.encabezado .menu-horizontal li:hover .menu-vertical {
 		display: block;
 	}
-
-	.header-txt {
-		width: 40%;
-		margin-top: 130px;
-		margin-left: 220px;
-		font-family: Franklin Gothic Book;
+	
+	.barras #btn_menu{
+		display: none;
 	}
-	.header-txt h1 {
+
+	.cotenedor-cover{
+		width: 100%;
+		height: 800%;
+		font-family: Franklin Gothic Book;
+		padding: 40px;
+	}
+
+	.cover{
+		max-width: 1200px;
+		height: 100%;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+	}
+	.cotenedor-cover .text h1 {
 		font-size: 40px;
 		line-height: 46px;
 		color: rgb(255, 255, 255);
 		margin-bottom: 12px;
 	}
-	.header-txt p {
+	.contenedor-cover .text p {
 		font-size: 20px;
 		color: rgb(243, 247, 59);
 		margin-bottom: 15px;
+	}
+
+	@media screen and (max-width:1200px){
+
+		.encabezado{
+			padding:40px;
+		}
+	}
+
+	@media screen and (max-width:720px){
+		.barras nav{
+			position: fixed;
+			top:0;
+			right: -250px;
+			background: white;
+			width: 250px;
+			height: 100vh;
+			padding: 40px;
+			z-index: 1;
+		}
+
+		.barras .menu-horizontal{
+			flex-direction: column;
+			margin-top: 40px;
+		}
+
+		.barras .menu-horizontal li{
+			margin-top: 30px;
+			margin-left: 0;
+		}
+		.barras .menu-horizontal li a{
+			color: #bebebe;
+
+		}
+
+		.barras nav img {
+			display: block;
+			width: 150px;
+
+		}
+		#back_menu{
+			position: fixed;
+			top:0;
+			left: 0;
+			width: 1200%;
+			height: 100vh;
+			background: rgba(0,0,0,0.5);
+		}
+		.barras #btn_menu{
+			width: 50px;
+			height:50px;
+			background: white;
+			display:display;
+			align-items: center;
+			justify-content:center ;
+		}
+
 	}
 
 	.contenido1 {
@@ -369,5 +461,6 @@
 	.pie_de_pagina a:hover {
 		background: rgb(146, 0, 0);
 		padding: 10px;
+		
 	}
 </style>
