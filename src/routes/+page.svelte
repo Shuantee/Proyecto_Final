@@ -13,7 +13,7 @@
 				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 				<ul class="menu-horizontal">
-					<li><a href="/inicio">Inicio</a></li>
+					<li><a href="/inicio">Inicioasjdfñasfd</a></li>
 					<li><a href="#">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
