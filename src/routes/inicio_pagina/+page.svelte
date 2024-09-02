@@ -1,6 +1,5 @@
 
 <header class="encabezado">
-
 	<div class="contenedor_menu">
 		<div class="logo">
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
@@ -8,21 +7,26 @@
 		</div>
 
 		<div class="barras">
+			<div id="menu-icono">
+				<i class="fa-solid fa-bars"></i>
+			</div>
 			<div id="back_menu"></div>
-			<nav>
+			<nav id="navegador">
 				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 				<ul class="menu-horizontal">
-					<li><a href="/inicio">Inicio</a></li>
+					<li><a href="#">Inicio</a></li>
 					<li><a href="#">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
 					</ul>
 				    </li>
-				    <li><a href="">Inicia sesión</a></li>
+				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
 				    <li><a href="/quejas">Quejas</a></li>
 			    </ul>
 			</nav>
+			<script src="https://kit.fontawesome.com/3cc8c30ab5.js" 
+               crossorigin="anonymous"></script>
 		</div>
 	</div>
 
@@ -38,6 +42,7 @@
 		    </div>
 	    </div>
     </main>
+
 </header>
 <br />
 <br />
@@ -77,7 +82,7 @@
 		possimus nobis soluta, eligendi veritatis fugit sed libero eos, vel recusandae molestiae
 		corrupti? Iste delectus repellat quod nulla?
 	</p>
-	<a href="Vaso_de_leche.html" class="btn-1">¿Qué es?</a>
+	<a href="/vaso_leche" class="btn-1">¿Qué es?</a>
 </section>
 <br />
 <br />
@@ -98,7 +103,7 @@
 		provident, dolor illum facere, suscipit minus quae repellendus autem odit magni recusandae
 		earum, laudantium vel aliquam aliquid.
 	</p>
-	<a href="Complemento.html" class="btn-1">¿Qué es?</a>
+	<a href="/complemento" class="btn-1">¿Qué es?</a>
 </section>
 <br />
 
@@ -153,10 +158,6 @@
 		list-style: none;
 	}
 
-	.cuerpo {
-		font-family: 'Franklin Gothic Book';
-		background-color: rgb(228, 233, 183);
-	}
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
@@ -167,6 +168,7 @@
 		align-items: center;
 		padding: 40px;
 		z-index: 1;
+		
 		}
 
 	.contenedor_menu{ 
@@ -203,14 +205,10 @@
 
 	.barras .menu-horizontal li a {
 		font-size: 16px;
-		color: white;
+		color: rgb(255, 255, 255);
 		margin-left: 36px;
 		display: block;
 		text-transform: uppercase;
-	}
-
-	.barras nav img{
-		display: none;
 	}
 	.encabezado li:hover {
 		background: rgb(0, 41, 80); 
@@ -220,52 +218,46 @@
 		position: absolute;
 		display: none;
 		width: 200px;
-		background-color: rgb(107, 107, 104);
+		background-color: rgb(114, 114, 112);
 	}
 
 	.encabezado .menu-horizontal li:hover .menu-vertical {
 		display: block;
 	}
-	
-	.barras #btn_menu{
+
+	.barras nav img{
 		display: none;
 	}
 
-	.cotenedor-cover{
-		width: 100%;
-		height: 800%;
-		font-family: Franklin Gothic Book;
-		padding: 40px;
+	.barras #menu-icono{
+		display: none;
 	}
+
 
 	.cover{
 		max-width: 1200px;
 		height: 100%;
 		margin: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
 	}
-	.cotenedor-cover .text h1 {
-		font-size: 40px;
-		line-height: 46px;
-		color: rgb(255, 255, 255);
-		margin-bottom: 12px;
+	.cover .text{
+		max-width: 400px;
 	}
-	.contenedor-cover .text p {
-		font-size: 20px;
-		color: rgb(243, 247, 59);
-		margin-bottom: 15px;
+	.cover .text h1{
+		width: 50%;
+		font-size: 36px;
+		font-weight: 600;
 	}
-
+	.cover .text p{
+		width: 50%;
+		font-size: 18px;
+		margin-top: 40px;
+	}
+	
 	@media screen and (max-width:1200px){
-
 		.encabezado{
 			padding:40px;
 		}
 	}
-
 	@media screen and (max-width:720px){
 		.barras nav{
 			position: fixed;
@@ -282,40 +274,55 @@
 			flex-direction: column;
 			margin-top: 40px;
 		}
-
 		.barras .menu-horizontal li{
 			margin-top: 30px;
 			margin-left: 0;
 		}
+
 		.barras .menu-horizontal li a{
-			color: #bebebe;
-
+			color: #7e0000;
 		}
-
-		.barras nav img {
+		.barras  nav img{
 			display: block;
-			width: 150px;
-
+			width: 85%;
 		}
+
 		#back_menu{
 			position: fixed;
-			top:0;
+			top: 0;
 			left: 0;
-			width: 1200%;
+			width:100%;
 			height: 100vh;
-			background: rgba(0,0,0,0.5);
-		}
-		.barras #btn_menu{
-			width: 50px;
-			height:50px;
-			background: white;
-			display:display;
-			align-items: center;
-			justify-content:center ;
+			background: rgba(0, 0, 0, 0.5);
+			display: none;
 		}
 
+		.barras #menu-icono{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 50px;
+			height: 50px;
+			background: rgba(255,255,255,0.1);
+			font-size: 24px;
+			border-radius: 50px;
+			cursor: pointer;
+			transition: all 300ms;
+		}
+
+		.barras #menu-icono:hover{
+			background: rgba(255, 255, 255, 0.596);
+		}
+
+		#menu-icono.active{
+			padding-left: 0px;
+			display: flex;
+		}
+		
 	}
 
+
+	/*otra cosa*/
 	.contenido1 {
 		text-align: left;
 		margin: 25px 25px;
