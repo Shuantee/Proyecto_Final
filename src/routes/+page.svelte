@@ -16,7 +16,7 @@
 				alt="logo">
 				<ul class="menu-horizontal">
 					
-					<li><a href="/inicio_pagina">Inicio</a></li>
+					<li><a href="#">Inicio</a></li>
 					<li><a href="#">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
