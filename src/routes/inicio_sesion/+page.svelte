@@ -224,55 +224,6 @@
 		}
 	}
 
-	@media screen and (max-width:720px){
-		.barras nav{
-			position: fixed;
-			top:0;
-			right: -250px;
-			background: white;
-			width: 250px;
-			height: 100vh;
-			padding: 40px;
-			z-index: 1;
-		}
-
-		.barras .menu-horizontal{
-			flex-direction: column;
-			margin-top: 40px;
-		}
-
-		.barras .menu-horizontal li{
-			margin-top: 30px;
-			margin-left: 0;
-		}
-		.barras .menu-horizontal li a{
-			color: #bebebe;
-
-		}
-
-		.barras nav img {
-			display: block;
-			width: 150px;
-
-		}
-		#back_menu{
-			position: fixed;
-			top:0;
-			left: 0;
-			width: 1200%;
-			height: 100vh;
-			background: rgba(0,0,0,0.5);
-		}
-		.barras #btn_menu{
-			width: 50px;
-			height:50px;
-			background: white;
-			display:display;
-			align-items: center;
-			justify-content:center ;
-		}
-
-	}
     .pie_de_pagina {
 		background-color: rgb(39, 82, 45);
 	}
