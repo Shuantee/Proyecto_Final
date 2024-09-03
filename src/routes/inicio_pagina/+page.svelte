@@ -49,25 +49,26 @@
 <br />
 <section class="contenido1">
 	<h1>¡Bienvenidos a Refrigerios Lola!</h1>
-	<br />
-	<p>
-		<b
-			>Aquí podras ver qué alimentos entregan en la institución Lola Gonzalez. Esto es con el fin de
+	<br>
+		<p>
+		<b>
+			Aquí podras ver qué alimentos entregan en la institución Lola Gonzalez. Esto es con el fin de
 			que sepas cuál de los dos refirgerios escoger, si complemento o vaso de leche.
 		</b>
-	</p>
-	<br />
-	<br />
+	    </p>
+	    <br />
+	    <br />
 
-	<h3>
-		A continuación te mostraremos los dos tipos de alimentos que entregan para que te decidas por el
-		que maaaas te im-pac-tó.
-	</h3>
-	<br />
-	<h3>(Recuerda que solo se escoge uno :(...)</h3>
-	<br />
+	    <h3>
+		    A continuación te mostraremos los dos tipos de alimentos que entregan para que te decidas por el
+		    que maaaas te im-pac-tó.
+	    </h3>
+	    <br />
+		<h3>(Recuerda que solo se escoge uno :(...)</h3>
+	    <br />
 </section>
-<section class="contenido2">
+<section class="vaso">
+	<div>
 	<h2>Vaso de leche</h2>
 	<div class="fotoVaso">
 		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721727/miproyecto/wbssonvbrggvrsw3gzk9.jpg" alt="foto" class="foto">
@@ -84,10 +85,11 @@
 		corrupti? Iste delectus repellat quod nulla?
 	</p>
 	<a href="/vaso_leche" class="btn-1">¿Qué es?</a>
+    </div>
 </section>
 <br />
 <br />
-<section class="contenido2">
+<section class="comple">
 	<h2>complemento</h2>
 	<br>
 	<div class="fotoComp">
@@ -109,7 +111,7 @@
 <br />
 
 <footer class="pie_de_pagina">
-	<div class="container">
+	
 		<div class="footer-link">
 			<div class="img">
 				<img
@@ -145,7 +147,6 @@
 				</ul>
 			</div>
 		</div>
-	</div>
 </footer>
 
 
@@ -169,7 +170,6 @@
 		align-items: center;
 		padding: 40px;
 		z-index: 1;
-		
 		}
 
 	.contenedor_menu{ 
@@ -256,9 +256,12 @@
 		color: yellow;
 	}
 	
+	@media screen and (max-width:1200px){
+		.encabezado{
+			padding:40px;
+		}
+	}
 	
-	
-
 
 	/*otra cosa*/
 	.contenido1 {
@@ -293,38 +296,43 @@
 	.contenido1 p {
 		font-size: 18px;
 		color: black;
+		padding: 40px;
 	}
 
-	.contenido2 {
+	.vaso {
 		text-align: center;
-		margin: 15px;
+		margin: 20px;
 	}
 
-	.contenido2 h2 {
+	.vaso h2 {
 		color: black;
 		font-size: 30px;
 		text-transform: uppercase;
 		margin: 35px;
 	}
 
-	.contenido2 img{
+	.vaso img{
 	    width: 160px;
 		height: 150px;
 		border-radius: 40%;
 		position: relative;
 		font-size: 25px;
 	}	
-	.contenido2 .fotoVaso img{
+	.vaso .fotoVaso img{
 		width: 155px;
 		height: 160px;
 		border-radius: 30%;
 		position: relative;
 		font-size: 20px;
 	}
-	.contenido2 p {
-		font-size: 34;
-		margin: 20px 350px;
-		margin-bottom: 35px;
+	.vaso p {
+		display: flex;
+		flex-wrap: wrap;
+		min-width: 250px;
+		padding: 25px;
+		margin: 10px;
+		flex: 1;
+		min-width: 300px;
 	}
 
 	.btn-1 {
@@ -333,6 +341,44 @@
 		background-color: #610909;
 		color: bisque;
 	}
+
+	.comple {
+		text-align: center;
+		margin: 20px;
+	}
+
+	.comple h2 {
+		color: black;
+		font-size: 30px;
+		text-transform: uppercase;
+		margin: 35px;
+	}
+
+	.comple img{
+	    width: 160px;
+		height: 150px;
+		border-radius: 40%;
+		position: relative;
+		font-size: 25px;
+	}	
+	.comple .fotoComp img{
+		width: 155px;
+		height: 160px;
+		border-radius: 30%;
+		position: relative;
+		font-size: 20px;
+	}
+	.comple p {
+		display: flex;
+		flex-wrap: wrap;
+		min-width: 250px;
+		padding: 25px;
+		margin: 10px;
+		flex: 1;
+		min-width: 300px;
+	}
+
+
 
 	.pie_de_pagina {
 		background-color: rgb(39, 82, 45);
