@@ -1,4 +1,3 @@
-
 <header class="encabezado">
 
 	<div class="contenedor_menu">
@@ -13,13 +12,13 @@
 				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 				<ul class="menu-horizontal">
-					<li><a href="/inicio">Inicioasjdfñasfd</a></li>
+					<li><a href="/inicio_pagina">Vuelve al Inicio</a></li>
 					<li><a href="#">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
 					</ul>
 				    </li>
-				    <li><a href="">Inicia sesión</a></li>
+				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
 				    <li><a href="/quejas">Quejas</a></li>
 			    </ul>
 			</nav>
@@ -32,75 +31,51 @@
 		<div class="contenedor-cover">
 			<div class="cover">
 				<div class="text">
-					<h1>REFRIGERIOS LOLA</h1>
-					<p>(RL)</p>
+					<h1>complemento</h1>
 		        </div>
 		    </div>
 	    </div>
     </main>
 </header>
-<br />
-<br />
-<section class="contenido1">
-	<h1>¡Bienvenidos a Refrigerios Lola!</h1>
-	<br />
-	<p>
-		<b
-			>Aquí podras ver qué alimentos entregan en la institución Lola Gonzalez. Esto es con el fin de
-			que sepas cuál de los dos refirgerios escoger, si complemento o vaso de leche.
-		</b>
-	</p>
-	<br />
-	<br />
 
-	<h3>
-		A continuación te mostraremos los dos tipos de alimentos que entregan para que te decidas por el
-		que maaaas te im-pac-tó.
-	</h3>
-	<br />
-	<h3>(Recuerda que solo se escoge uno :(...)</h3>
-	<br />
+<section>
+<h1>
+    ¿QUÉ ES COMPLEMENTO?
+</h1>
+<p>
+    Aquí se realiza un breve resumen de que es este complemento, despues se muestra las variedades de 
+    complemento que van a entregar aproximandamente
+</p>
+        <p>
+            introducción a ver los siguientes alimentos. Se van a mostrar foto y lo que contiene
+            posiblemente 
+        </p>
 </section>
-<section class="contenido2">
-	<h2>Vaso de leche</h2>
-	<div class="fotoVaso">
-		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721727/miproyecto/wbssonvbrggvrsw3gzk9.jpg" alt="foto" class="foto">
-		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721568/miproyecto/ykswvqg5cffn1dzzafu8.jpg" alt="foto" class="foto">
-	</div>
-	<p>
-		Bienvenidos al vaso de leche, en este lugar lo que buscamos es darle un alimento ligero a los
-		estudiantes con el cual se sientan a gusto, en este lugar obtienen bebidas lácteas variadas,
-		tambien hay frutas, y comidas como panes que ayudan a un balance en el alimento de los
-		estudiantes.
-	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eveniet numquam perferendis,
-		possimus nobis soluta, eligendi veritatis fugit sed libero eos, vel recusandae molestiae
-		corrupti? Iste delectus repellat quod nulla?
-	</p>
-	<a href="Vaso_de_leche.html" class="btn-1">¿Qué es?</a>
+
+<section>
+<h1>
+    Imágenes
+</h1>
+<p>
+  se muestra cada imagen son su contenido.
+</p>
 </section>
-<br />
-<br />
-<section class="contenido2">
-	<h2>complemento</h2>
-	<br>
-	<div class="fotoComp">
-		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721327/miproyecto/ullpwk1n9izaqzhl2s0m.jpg" alt="imagen" class="foto">
-		<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721443/miproyecto/umptturspkmfowpqqnb2.jpg" alt="fotis" class="fotos">
-	</div>
-	<p>
-		En el complemento preparado los estudiantes obtienen comidas balanceadas para el desarrollo de
-		los estudiantes a lo largo de su etapa estudiantil, en este lugar, se les da una comida
-		balanceada en azucares, y calorias, todo para cuidar a los estudiantes.
-	</p>
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi in molestiae cupiditate quam
-		provident, dolor illum facere, suscipit minus quae repellendus autem odit magni recusandae
-		earum, laudantium vel aliquam aliquid.
-	</p>
-	<a href="Complemento.html" class="btn-1">¿Qué es?</a>
+
+<section>
+<h1>ventajas y desvenajas</h1>
+<p>
+    una de las ventajas que tiene el complemento es que se hace recien hecho en la escuela. 
+    los estudiantes tendran comida caliente posiblemente pero el problema es que como son para un 
+    monton de estudiantes, la ocmida queda fría. 
+</p>
 </section>
-<br />
+
+<section>
+<h1>Conclusión</h1>
+<p>
+    El complemento es un alimento que tiene 
+</p>
+</section>
 
 <footer class="pie_de_pagina">
 	<div class="container">
@@ -231,7 +206,7 @@
 		display: none;
 	}
 
-	.cotenedor-cover{
+    .cotenedor-cover{
 		width: 100%;
 		height: 800%;
 		font-family: Franklin Gothic Book;
@@ -315,81 +290,7 @@
 		}
 
 	}
-
-	.contenido1 {
-		text-align: left;
-		margin: 25px 25px;
-	}
-	.contenido1 h1 {
-		font-size: 32px;
-		font-family: Malgun Gothic;
-		color: rgb(0, 0, 0);
-		text-transform: uppercase;
-		padding: 12px 20px;
-		text-align: center;
-	}
-	.contenido1 p {
-		font-size: 32px;
-		font-family: Malgun Gothic;
-		color: rgb(0, 0, 0);
-		text-transform: uppercase;
-		padding: 12px 200px;
-		text-align: center;
-	}
-
-	.contenido1 h3 {
-		font-size: 30px;
-		font-family: 'Times New Roman', Times, serif;
-		color: rgba(12, 88, 5, 0.897);
-		text-align: center;
-		margin: 10px 90px;
-	}
-
-	.contenido1 p {
-		font-size: 18px;
-		color: black;
-	}
-
-	.contenido2 {
-		text-align: center;
-		margin: 15px;
-	}
-
-	.contenido2 h2 {
-		color: black;
-		font-size: 30px;
-		text-transform: uppercase;
-		margin: 35px;
-	}
-
-	.contenido2 img{
-	    width: 160px;
-		height: 150px;
-		border-radius: 40%;
-		position: relative;
-		font-size: 25px;
-	}	
-	.contenido2 .fotoVaso img{
-		width: 155px;
-		height: 160px;
-		border-radius: 30%;
-		position: relative;
-		font-size: 20px;
-	}
-	.contenido2 p {
-		font-size: 34;
-		margin: 20px 350px;
-		margin-bottom: 35px;
-	}
-
-	.btn-1 {
-		display: inline-block;
-		padding: 15px 35px;
-		background-color: #610909;
-		color: bisque;
-	}
-
-	.pie_de_pagina {
+    .pie_de_pagina {
 		background-color: rgb(39, 82, 45);
 	}
 
