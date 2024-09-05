@@ -38,10 +38,11 @@
     </main>
 </header>
 
-<section>
+<section class="pregunta">
 <h1>
     ¿QUÉ ES COMPLEMENTO?
 </h1>
+</section>
 <section class="contener">
 	<div class="slider-wrapper">
 		<div class="slider">
@@ -67,6 +68,8 @@
         </div>
     </div>
 </section>
+
+<section>
 <p>
     Aquí se realiza un breve resumen de que es este complemento, despues se muestra las variedades de 
     complemento que van a entregar aproximandamente
@@ -75,15 +78,6 @@
             introducción a ver los siguientes alimentos. Se van a mostrar foto y lo que contiene
             posiblemente 
         </p>
-</section>
-
-<section>
-<h1>
-    Imágenes
-</h1>
-<p>
-  se muestra cada imagen son su contenido.
-</p>
 </section>
 
 <section>
@@ -269,6 +263,13 @@
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
+}
+
+.pregunta h1{
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 25px;
 }
 
 

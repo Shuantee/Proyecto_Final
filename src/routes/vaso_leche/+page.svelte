@@ -76,15 +76,6 @@
   </section>
 
   <section>
-	<h1>
-		Imágenes
-	</h1>
-	<p>
-	   Se muestra y se dice que contiene
-	</p>
-  </section>
-
-  <section>
 	<h1>ventajas y desvenajas</h1>
 	<p>
 		
@@ -249,9 +240,10 @@
 	}
 
 	.pregunta h1{
-		padding: 40px;
-		display: flex;
-		align-items: center;
+		padding: 20px;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 25px;
 	}
 
 	.contener{
