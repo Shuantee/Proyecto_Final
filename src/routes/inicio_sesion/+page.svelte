@@ -31,7 +31,7 @@
 		<div class="contenedor-cover">
 			<div class="cover">
 				<div class="text">
-					<h1>complemento</h1>
+					<h1>INICIO DE SESIÓN</h1>
 		        </div>
 		    </div>
 	    </div>
@@ -204,8 +204,8 @@
 		margin-bottom: 12px;
 	}
 	.contenedor-cover .text h1{
-		font-size: 20px;
-		color: rgb(243, 247, 59);
+		font-size: 36px;
+		color: white;
 		margin-bottom: 15px;
 	}
 

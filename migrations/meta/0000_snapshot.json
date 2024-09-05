@@ -1,0 +1,74 @@
+{
+  "id": "00000000-0000-0000-0000-000000000000",
+  "prevId": "",
+  "version": "6",
+  "dialect": "sqlite",
+  "tables": {
+    "GRUPO": {
+      "name": "GRUPO",
+      "columns": {
+        "ID": {
+          "autoincrement": false,
+          "name": "ID",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nom_grup": {
+          "autoincrement": false,
+          "name": "nom_grup",
+          "type": "text(255)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "GRADO": {
+      "name": "GRADO",
+      "columns": {
+        "ID": {
+          "autoincrement": false,
+          "name": "ID",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "ID_grupo": {
+          "autoincrement": false,
+          "name": "ID_grupo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "GRADO_ID_grupo_GRUPO_ID_fk": {
+          "name": "GRADO_ID_grupo_GRUPO_ID_fk",
+          "tableFrom": "GRADO",
+          "tableTo": "GRUPO",
+          "columnsFrom": [
+            "ID_grupo"
+          ],
+          "columnsTo": [
+            "ID"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}

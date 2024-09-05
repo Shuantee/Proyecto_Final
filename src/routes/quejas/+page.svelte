@@ -211,8 +211,17 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
 	}
+
+	.cover .text h1{
+		width: 50%;
+		font-size: 36px;
+		font-weight: 600;
+		color:white;
+		font-family: Malgun Gothic;
+	}
+
+
 	.contenedor-cover .text h1 {
 		font-size: 40px;
 		line-height: 46px;
