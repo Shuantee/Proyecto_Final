@@ -111,10 +111,6 @@
 		list-style: none;
 	}
 
-	.cuerpo {
-		font-family: 'Franklin Gothic Book';
-		background-color: rgb(228, 233, 183);
-	}
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
@@ -185,11 +181,7 @@
 		display: block;
 	}
 	
-	.barras #btn_menu{
-		display: none;
-	}
-
-    .cotenedor-cover{
+    .contenedor-cover{
 		width: 100%;
 		height: 800%;
 		font-family: Franklin Gothic Book;
@@ -205,13 +197,13 @@
 		justify-content: space-between;
 
 	}
-	.cotenedor-cover .text h1 {
+	.contenedor-cover .text h1 {
 		font-size: 40px;
 		line-height: 46px;
 		color: rgb(255, 255, 255);
 		margin-bottom: 12px;
 	}
-	.contenedor-cover .text p {
+	.contenedor-cover .text h1{
 		font-size: 20px;
 		color: rgb(243, 247, 59);
 		margin-bottom: 15px;
@@ -252,10 +244,6 @@
 		position: relative;
 	}
 
-	.pie_de_pagina .gobierno {
-		width: 200px;
-		position: relative;
-	}
 
 	.pie_de_pagina .img {
 		margin-top: 50px;

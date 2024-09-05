@@ -408,10 +408,7 @@
 		position: relative;
 	}
 
-	.pie_de_pagina .gobierno {
-		width: 200px;
-		position: relative;
-	}
+
 
 	.pie_de_pagina .img {
 		margin-top: 50px;
