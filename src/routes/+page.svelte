@@ -16,8 +16,8 @@
 				alt="logo">
 				<ul class="menu-horizontal">
 					
-					<li><a href="#">Inicio</a></li>
-					<li><a href="#">inscripción</a>
+					<li><a href="/">Inicio</a></li>
+					<li><a href="/">inscripción</a>
 					<ul class="menu-vertical">
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
 					</ul>
@@ -128,22 +128,22 @@
 			<div class="link">
 				<h4>Compañía</h4>
 				<ul>
-					<li><a href="#">señor1</a></li>
-					<li><a href="#">señor2</a></li>
-					<li><a href="#">señora3</a></li>
+					<li><a href="/">señor1</a></li>
+					<li><a href="/">señor2</a></li>
+					<li><a href="/">señora3</a></li>
 				</ul>
 			</div>
 			<div class="link">
 				<h4>Compañía</h4>
 				<ul>
-					<li><a href="#">señor4</a></li>
-					<li><a href="#">señor5</a></li>
+					<li><a href="/">señor4</a></li>
+					<li><a href="/">señor5</a></li>
 				</ul>
 			</div>
 			<div class="link">
 				<h4>Queja</h4>
 				<ul>
-					<li><a href="#">Inquietudes</a></li>
+					<li><a href="/">Inquietudes</a></li>
 				</ul>
 			</div>
 		</div>
