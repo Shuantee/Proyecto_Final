@@ -42,29 +42,31 @@
 <h1>
     ¿QUÉ ES COMPLEMENTO?
 </h1>
+<section class="contener">
+	<div class="slider-wrapper">
+		<div class="slider">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721739/miproyecto/dg597fo7dpsqjopm0tqz.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721713/miproyecto/fbqj6jpem2qqcm9lpd4m.jpg" alt="">
+	        <img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721687/miproyecto/j9ot6uycxcukys6m0iwe.jpg" alt="">
+	        <img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721671/miproyecto/tizfliojhmphgsqu1hde.jpg" alt="">
+	        <img id="slider-5" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721597/miproyecto/zpkxtt96ymyqvcq1zwk3.jpg" alt="">
+	        <img id="slider-6" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721584/miproyecto/ykukqyks5ycbv6kym2nx.jpg" alt="">
+	        <img id="slider-7" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721539/miproyecto/dssrpechg2uzfudxysur.jpg" alt="">
+	        <img id="slider-8" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721508/miproyecto/ixphpcpxwi4bgezhup4a.jpg" alt="">
+	        <img id="slider-9" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721497/miproyecto/hyyzx73u39j2fx8u3tsy.jpg" alt="">
+	        <img id="slider-10" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721483/miproyecto/h6jspn3xxkp119bmo6wf.jpg" alt="">
+	        <img id="slider-11" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721443/miproyecto/umptturspkmfowpqqnb2.jpg" alt="">
+	        <img id="slider-12" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721433/miproyecto/p734ertdvrjwsovbtv91.jpg" alt="">
+	        <img id="slider-13" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721411/miproyecto/os3qfgtysxxscpvs4kvs.jpg" alt="">
+	        <img id="slider-14" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721382/miproyecto/jx9q99eh98jpi7tgumnh.jpg" alt="">
+	        <img id="slider-15" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721376/miproyecto/cnyuwqthr8rhakmk0qw3.jpg" alt="">
+	        <img id="slider-16" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721367/miproyecto/reji14jtdun7soggxjhh.jpg" alt="">
+	        <img id="slider-17" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721340/miproyecto/ktulillzaumeeh9adjlb.jpg" alt="">
+	        <img id="slider-18" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721327/miproyecto/ullpwk1n9izaqzhl2s0m.jpg" alt="">
 
-<div class="imagenes">
-	<ul>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721739/miproyecto/dg597fo7dpsqjopm0tqz.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721713/miproyecto/fbqj6jpem2qqcm9lpd4m.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721687/miproyecto/j9ot6uycxcukys6m0iwe.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721671/miproyecto/tizfliojhmphgsqu1hde.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721597/miproyecto/zpkxtt96ymyqvcq1zwk3.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721584/miproyecto/ykukqyks5ycbv6kym2nx.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721539/miproyecto/dssrpechg2uzfudxysur.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721508/miproyecto/ixphpcpxwi4bgezhup4a.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721497/miproyecto/hyyzx73u39j2fx8u3tsy.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721483/miproyecto/h6jspn3xxkp119bmo6wf.jpg" alt=""></li>
-	    <li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721443/miproyecto/umptturspkmfowpqqnb2.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721433/miproyecto/p734ertdvrjwsovbtv91.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721411/miproyecto/os3qfgtysxxscpvs4kvs.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721382/miproyecto/jx9q99eh98jpi7tgumnh.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721376/miproyecto/cnyuwqthr8rhakmk0qw3.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721367/miproyecto/reji14jtdun7soggxjhh.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721340/miproyecto/ktulillzaumeeh9adjlb.jpg" alt=""></li>
-		<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721327/miproyecto/ullpwk1n9izaqzhl2s0m.jpg" alt=""></li>
-	</ul>
-</div>
+        </div>
+    </div>
+</section>
 <p>
     Aquí se realiza un breve resumen de que es este complemento, despues se muestra las variedades de 
     complemento que van a entregar aproximandamente
@@ -249,26 +251,26 @@
 		}
 	}
 
+.contener{
+	padding: 2rem;
 
-.imagenes {
-  width: 1280px;
-  height: auto;
-  margin: 50px auto 0;
-  overflow: hidden;
-  animation-name: deslis;
-  animation-duration: 15s infinite alternate ease-in-out;
 }
 
-.imagenes ul{
-display: flex;
-padding: 0;
-width: 400%;
+.slider-wrapper{
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
 }
 
-.imagenes li{
-	list-style: none;
-	width: 100%;
+.slider{
+	display: flex;
+	aspect-ratio: 16/9;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
 }
+
 
 .pie_de_pagina {
 	background-color: rgb(39, 82, 45);

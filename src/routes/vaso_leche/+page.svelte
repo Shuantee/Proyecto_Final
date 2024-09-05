@@ -37,29 +37,31 @@
 	    </div>
     </main>
 </header>
-<section>
+<br>
+<section class="pregunta">
 	<h1>
 		¿Qúe es vaso de leche?
 	</h1>
-	<div>
-		<ul>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721884/miproyecto/b6qf9vvh4oezoibloknx.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721877/miproyecto/jmjt39ngzirih9kuqq00.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721751/miproyecto/ubqfxcpu6c2wetz3jamw.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721727/miproyecto/wbssonvbrggvrsw3gzk9.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721697/miproyecto/zhdua4j8lcwley6dtoyq.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721653/miproyecto/udausemzca968caqnhtd.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721633/miproyecto/ccqpzhjj8jcdjpvdqqrd.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721615/miproyecto/sgyn1mlmj2jxbc2ot9bm.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721568/miproyecto/ykswvqg5cffn1dzzafu8.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721529/miproyecto/srv0b76stqoh06c7h6xo.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721468/miproyecto/uv2jh7baitoz8lvao6qy.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721421/miproyecto/fr5jab4ekgliwahacyla.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721400/miproyecto/abtcp3qpsh1p8ky6ktz7.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721358/miproyecto/gsudfb2rjm5fdqk2lucn.jpg" alt=""></li>
-			<li><img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721348/miproyecto/ywqribekmk286n9pccqo.jpg" alt=""></li>
-		</ul>
+
+<section class="contener">
+	<div class="slider-wrapper">
+		<div class="slider">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721751/miproyecto/ubqfxcpu6c2wetz3jamw.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721727/miproyecto/wbssonvbrggvrsw3gzk9.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721697/miproyecto/zhdua4j8lcwley6dtoyq.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721653/miproyecto/udausemzca968caqnhtd.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721633/miproyecto/ccqpzhjj8jcdjpvdqqrd.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721615/miproyecto/sgyn1mlmj2jxbc2ot9bm.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721568/miproyecto/ykswvqg5cffn1dzzafu8.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721529/miproyecto/srv0b76stqoh06c7h6xo.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721468/miproyecto/uv2jh7baitoz8lvao6qy.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721421/miproyecto/fr5jab4ekgliwahacyla.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721400/miproyecto/abtcp3qpsh1p8ky6ktz7.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721358/miproyecto/gsudfb2rjm5fdqk2lucn.jpg" alt="">
+			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721348/miproyecto/ywqribekmk286n9pccqo.jpg" alt="">
+		</div>
 	</div>
+</section>
 	<p>
 		1
 	</p>
@@ -243,6 +245,33 @@
 			padding:40px;
 		}
 	}
+
+	.pregunta h1{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.contener{
+	padding: 2rem;
+
+}
+
+.slider-wrapper{
+	position: relative;
+	max-width: 48rem;
+	margin: 0 auto;
+}
+
+.slider{
+	display: flex;
+	aspect-ratio: 16/9;
+	overflow: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
+}
+
 
 
     .pie_de_pagina {
