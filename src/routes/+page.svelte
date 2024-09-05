@@ -338,8 +338,8 @@
 	.btn-1 {
 		display: inline-block;
 		padding: 15px 35px;
-		background-color: #610909;
-		color: bisque;
+		background-color:rgb(39, 82, 45);
+		color:white;
 	}
 
 	.comple {
@@ -449,6 +449,5 @@
 	.pie_de_pagina a:hover {
 		background: rgb(146, 0, 0);
 		padding: 10px;
-		
 	}
 </style>
