@@ -42,7 +42,7 @@
 	<h1>
 		¿Qúe es vaso de leche?
 	</h1>
-
+</section>
 <section class="contener">
 	<div class="slider-wrapper">
 		<div class="slider">
@@ -62,6 +62,8 @@
 		</div>
 	</div>
 </section>
+
+<section>
 	<p>
 		1
 	</p>
@@ -247,9 +249,9 @@
 	}
 
 	.pregunta h1{
+		padding: 40px;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
 	}
 
 	.contener{
