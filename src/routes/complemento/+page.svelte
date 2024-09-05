@@ -222,10 +222,9 @@
 		display: block;
 	}
 	
-    .contenedor-cover{
+	.contenedor-cover{
 		width: 100%;
 		height: 800%;
-		font-family: Franklin Gothic Book;
 		padding: 40px;
 	}
 
@@ -233,21 +232,14 @@
 		max-width: 1200px;
 		height: 100%;
 		margin: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 
 	}
-	.contenedor-cover .text h1 {
-		font-size: 40px;
-		line-height: 46px;
-		color: rgb(255, 255, 255);
-		margin-bottom: 12px;
-	}
-	.contenedor-cover .text h1 {
-		font-size: 20px;
-		color: rgb(243, 247, 59);
-		margin-bottom: 15px;
+	.cover .text h1 {
+		width: 50%;
+		font-size: 36px;
+		font-weight: 600;
+		color:white;
+		text-transform: uppercase;
 	}
 
 	@media screen and (max-width:1200px){
@@ -327,7 +319,7 @@ width: 400%;
 	}
 	.footer-link h4 {
 		position: relative;
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		font-weight: 400;
 		font-size: 15px;
 		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

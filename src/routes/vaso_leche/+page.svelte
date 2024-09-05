@@ -218,7 +218,6 @@
     .contenedor-cover{
 		width: 100%;
 		height: 800%;
-		font-family: Franklin Gothic Book;
 		padding: 40px;
 	}
 
@@ -231,16 +230,11 @@
 		justify-content: space-between;
 
 	}
-	.contenedor-cover .text h1 {
-		font-size: 40px;
-		line-height: 46px;
-		color: rgb(255, 255, 255);
-		margin-bottom: 12px;
-	}
-	.contenedor-cover .text h1 {
-		font-size: 20px;
-		color: rgb(243, 247, 59);
-		margin-bottom: 15px;
+	.cover .text h1 {
+		font-size: 34px;
+		color:white;
+		width: 60%;
+		text-transform: uppercase;
 	}
 
 	@media screen and (max-width:1200px){
