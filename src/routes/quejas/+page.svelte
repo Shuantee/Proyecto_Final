@@ -31,7 +31,7 @@
 		<div class="contenedor-cover">
 			<div class="cover">
 				<div class="text">
-					<h1>complemento</h1>
+					<h1>QUEJAS</h1>
 		        </div>
 		    </div>
 	    </div>
@@ -40,15 +40,13 @@
 
 <section>
 <h1>
-    ¿QUÉ ES COMPLEMENTO?
+    1
 </h1>
 <p>
-    Aquí se realiza un breve resumen de que es este complemento, despues se muestra las variedades de 
-    complemento que van a entregar aproximandamente
+    2
 </p>
         <p>
-            introducción a ver los siguientes alimentos. Se van a mostrar foto y lo que contiene
-            posiblemente 
+            3
         </p>
 </section>
 
@@ -62,18 +60,16 @@
 </section>
 
 <section>
-<h1>ventajas y desvenajas</h1>
+<h1>2</h1>
 <p>
-    una de las ventajas que tiene el complemento es que se hace recien hecho en la escuela. 
-    los estudiantes tendran comida caliente posiblemente pero el problema es que como son para un 
-    monton de estudiantes, la ocmida queda fría. 
+    1
 </p>
 </section>
 
 <section>
-<h1>Conclusión</h1>
+<h1>oo</h1>
 <p>
-    El complemento es un alimento que tiene 
+   n 
 </p>
 </section>
 
@@ -128,10 +124,7 @@
 		list-style: none;
 	}
 
-	.cuerpo {
-		font-family: 'Franklin Gothic Book';
-		background-color: rgb(228, 233, 183);
-	}
+	
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
