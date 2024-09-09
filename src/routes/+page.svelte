@@ -5,17 +5,8 @@
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 		</div>
-
 		<div class="barras">
-			<div id="menu-icono">
-				<i class="fa-solid fa-bars"></i>
-			</div>
-			<div id="back_menu"></div>
-			<nav id="navegador">
-				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
 				<ul class="menu-horizontal">
-					
 					<li><a href="/">Inicio</a></li>
 					<li><a href="/">inscripción</a>
 					<ul class="menu-vertical">
@@ -25,12 +16,8 @@
 				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
 				    <li><a href="/quejas">Quejas</a></li>
 			    </ul>
-			</nav>
-			<script src="https://kit.fontawesome.com/3cc8c30ab5.js" 
-               crossorigin="anonymous"></script>
 		</div>
 	</div>
-
 	<br />
 	<br />
 	<main>
@@ -43,8 +30,8 @@
 		    </div>
 	    </div>
     </main>
-
 </header>
+
 <br />
 <br />
 <section class="contenido1">
@@ -170,12 +157,13 @@
 		align-items: center;
 		padding: 40px;
 		z-index: 1;
+		position: relative;
 		}
 
 	.contenedor_menu{ 
 		max-width: 1200px;
-		height: 100%;
-		margin: auto;
+		height: 60px;
+		margin: 0 auto;
 		display: flex;
 		justify-content: space-between;
 	}
@@ -226,15 +214,7 @@
 		display: block;
 	}
 
-	.barras nav img{
-		display: none;
-	}
-
-	.barras #menu-icono{
-		display: none;
-	}
-
-
+/*otro*/
 	.cover{
 		max-width: 1200px;
 		height: 100%;
