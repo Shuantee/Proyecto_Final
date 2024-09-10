@@ -6,6 +6,9 @@
 				alt="logo">
 		</div>
 		<div class="barras">
+			<div class="menu-icono">
+				<i class="fa-solid fa-bars"></i>
+			</div>
 				<ul class="menu-horizontal">
 					<li><a href="/">Inicio</a></li>
 					<li><a href="/">inscripción</a>
@@ -13,10 +16,11 @@
 						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
 					</ul>
 				    </li>
-				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
-				    <li><a href="/quejas">Quejas</a></li>
+				    <li><a href="./inicio_sesion">Inicia sesión</a></li>
+				    <li><a href="./quejas">Quejas</a></li>
 			    </ul>
 		</div>
+			
 	</div>
 	<br />
 	<br />
@@ -241,7 +245,6 @@
 			padding:40px;
 		}
 	}
-	
 
 	/*otra cosa*/
 	.contenido1 {
