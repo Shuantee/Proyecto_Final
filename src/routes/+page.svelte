@@ -232,11 +232,11 @@
 		font-size: 36px;
 		font-weight: 600;
 		color:white;
+		margin-top: 40px;
 	}
 	.cover .text p{
 		width: 50%;
 		font-size: 18px;
-		margin-top: 40px;
 		color: yellow;
 	}
 	
