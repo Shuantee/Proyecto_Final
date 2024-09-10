@@ -83,16 +83,26 @@
 <section>
 <h1>ventajas y desvenajas</h1>
 <p>
-    una de las ventajas que tiene el complemento es que se hace recien hecho en la escuela. 
-    los estudiantes tendran comida caliente posiblemente pero el problema es que como son para un 
-    monton de estudiantes, la ocmida queda fría. 
+	Ventajas:
+
+	Este alimento es más completo y puede ayudar 
+	mucho más a llenar a los estudiantes que por algún motivo o 
+	circunstancia no puedan desayunar en sus casas.
+
+	Desventajas:
+
+  Que estos alimentos pueden ser en diferentes emplatados y diferentes combinaciones de comida
+  que puede resultar que algunos alimentos no sean lo suficientemente agradables a los estudiantes, 
+  y también que estos alimentos pueden resultar fríos y de un gusto "malo" a la comida.
 </p>
 </section>
 
 <section>
 <h1>Conclusión</h1>
 <p>
-    El complemento es un alimento que tiene 
+	El complemento o también llamado complemento preparado, es un conjunto de alimentos preparados y servidos en platos,
+	 estos alimentos están hechos en combinaciones de diferentes conjuntos. 
+	 Un ejemplo esto sería arroz con huevo y guineo, con un jugo de tomate.
 </p>
 </section>
 
