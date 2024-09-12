@@ -81,14 +81,16 @@
 </section>
 
 <section>
-<h1>ventajas y desvenajas</h1>
+<h1>ventajas y desventajas</h1>
 <p>
 	Ventajas:
 
 	Este alimento es más completo y puede ayudar 
 	mucho más a llenar a los estudiantes que por algún motivo o 
-	circunstancia no puedan desayunar en sus casas.
-
+	circunstancia no puedan desayunar en sus casas, además que es esta comida es una ayuda mejor 
+	para que los estudiantes puedan alimentarse de una forma más segura y completa.
+   <br>
+   <br>
 	Desventajas:
 
   Que estos alimentos pueden ser en diferentes emplatados y diferentes combinaciones de comida
