@@ -51,10 +51,10 @@
 
 	    <h3>
 		    A continuación te mostraremos los dos tipos de alimentos que entregan para que te decidas por el
-		    que maaaas te im-pac-tó.
+		    que maaaás te im-pac-tó.
 	    </h3>
 	    <br />
-		<h3>(Recuerda que solo se escoge uno :(...)</h3>
+		<h3>(Recuerda que solo se puede escoger uno de estos :(...)</h3>
 	    <br />
 </section>
 <section class="vaso">
@@ -70,10 +70,6 @@
 		tambien hay frutas, y comidas como panes que ayudan a un balance en el alimento de los
 		estudiantes.
 	<p>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eveniet numquam perferendis,
-		possimus nobis soluta, eligendi veritatis fugit sed libero eos, vel recusandae molestiae
-		corrupti? Iste delectus repellat quod nulla?
-	</p>
 	<a href="/vaso_leche" class="btn-1">¿Qué es?</a>
     </div>
 </section>
@@ -91,11 +87,7 @@
 		los estudiantes a lo largo de su etapa estudiantil, en este lugar, se les da una comida
 		balanceada en azucares, y calorias, todo para cuidar a los estudiantes.
 	</p>
-	<p>
-		Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi in molestiae cupiditate quam
-		provident, dolor illum facere, suscipit minus quae repellendus autem odit magni recusandae
-		earum, laudantium vel aliquam aliquid.
-	</p>
+
 	<a href="/complemento" class="btn-1">¿Qué es?</a>
 </section>
 <br />

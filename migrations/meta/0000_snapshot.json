@@ -4,12 +4,12 @@
   "version": "6",
   "dialect": "sqlite",
   "tables": {
-    "GRUPO": {
-      "name": "GRUPO",
+    "grupo": {
+      "name": "grupo",
       "columns": {
-        "ID": {
+        "id": {
           "autoincrement": false,
-          "name": "ID",
+          "name": "id",
           "type": "integer",
           "primaryKey": true,
           "notNull": false
@@ -17,7 +17,7 @@
         "nom_grup": {
           "autoincrement": false,
           "name": "nom_grup",
-          "type": "text(255)",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         }
@@ -27,19 +27,19 @@
       "foreignKeys": {},
       "uniqueConstraints": {}
     },
-    "GRADO": {
-      "name": "GRADO",
+    "grado": {
+      "name": "grado",
       "columns": {
-        "ID": {
+        "id": {
           "autoincrement": false,
-          "name": "ID",
+          "name": "id",
           "type": "integer",
           "primaryKey": true,
           "notNull": false
         },
-        "ID_grupo": {
+        "id_grupo": {
           "autoincrement": false,
-          "name": "ID_grupo",
+          "name": "id_grupo",
           "type": "integer",
           "primaryKey": false,
           "notNull": false
@@ -48,15 +48,282 @@
       "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {
-        "GRADO_ID_grupo_GRUPO_ID_fk": {
-          "name": "GRADO_ID_grupo_GRUPO_ID_fk",
-          "tableFrom": "GRADO",
-          "tableTo": "GRUPO",
+        "grado_id_grupo_grupo_id_fk": {
+          "name": "grado_id_grupo_grupo_id_fk",
+          "tableFrom": "grado",
+          "tableTo": "grupo",
           "columnsFrom": [
-            "ID_grupo"
+            "id_grupo"
           ],
           "columnsTo": [
-            "ID"
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "estudiante": {
+      "name": "estudiante",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nom_estudiante": {
+          "autoincrement": false,
+          "name": "nom_estudiante",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_grupo": {
+          "autoincrement": false,
+          "name": "id_grupo",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "estudiante_id_grupo_grupo_id_fk": {
+          "name": "estudiante_id_grupo_grupo_id_fk",
+          "tableFrom": "estudiante",
+          "tableTo": "grupo",
+          "columnsFrom": [
+            "id_grupo"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "quejas": {
+      "name": "quejas",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "id_estudiantes": {
+          "autoincrement": false,
+          "name": "id_estudiantes",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_pae": {
+          "autoincrement": false,
+          "name": "id_pae",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "fecha": {
+          "autoincrement": false,
+          "name": "fecha",
+          "type": "numeric",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "problema": {
+          "autoincrement": false,
+          "name": "problema",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nom_queja": {
+          "autoincrement": false,
+          "name": "nom_queja",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tipo_alimento": {
+          "autoincrement": false,
+          "name": "tipo_alimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "quejas_id_pae_pae_id_fk": {
+          "name": "quejas_id_pae_pae_id_fk",
+          "tableFrom": "quejas",
+          "tableTo": "pae",
+          "columnsFrom": [
+            "id_pae"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "quejas_id_estudiantes_estudiante_id_fk": {
+          "name": "quejas_id_estudiantes_estudiante_id_fk",
+          "tableFrom": "quejas",
+          "tableTo": "estudiante",
+          "columnsFrom": [
+            "id_estudiantes"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "pae": {
+      "name": "pae",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "id_foto": {
+          "autoincrement": false,
+          "name": "id_foto",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tipo_alimento": {
+          "autoincrement": false,
+          "name": "tipo_alimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_menu": {
+          "autoincrement": false,
+          "name": "id_menu",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "pae_id_menu_menu_id_fk": {
+          "name": "pae_id_menu_menu_id_fk",
+          "tableFrom": "pae",
+          "tableTo": "menu",
+          "columnsFrom": [
+            "id_menu"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "uniqueConstraints": {}
+    },
+    "ingrediente": {
+      "name": "ingrediente",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "nom_ingrediente": {
+          "autoincrement": false,
+          "name": "nom_ingrediente",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {},
+      "uniqueConstraints": {}
+    },
+    "alimento": {
+      "name": "alimento",
+      "columns": {
+        "id": {
+          "autoincrement": false,
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": false
+        },
+        "id_quejas": {
+          "autoincrement": false,
+          "name": "id_quejas",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_pae": {
+          "autoincrement": false,
+          "name": "id_pae",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "id_tipo_alimento": {
+          "autoincrement": false,
+          "name": "id_tipo_alimento",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "compositePrimaryKeys": {},
+      "indexes": {},
+      "foreignKeys": {
+        "alimento_id_pae_pae_id_fk": {
+          "name": "alimento_id_pae_pae_id_fk",
+          "tableFrom": "alimento",
+          "tableTo": "pae",
+          "columnsFrom": [
+            "id_pae"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "alimento_id_quejas_quejas_id_fk": {
+          "name": "alimento_id_quejas_quejas_id_fk",
+          "tableFrom": "alimento",
+          "tableTo": "quejas",
+          "columnsFrom": [
+            "id_quejas"
+          ],
+          "columnsTo": [
+            "id"
           ],
           "onDelete": "no action",
           "onUpdate": "no action"
