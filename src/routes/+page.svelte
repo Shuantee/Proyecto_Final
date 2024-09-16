@@ -1,3 +1,18 @@
+<body>
+<script>
+	const nav = document.querySelector("#nav");
+	const abrir = document.querySelector("#abrir");
+	const cerrar = document.querySelector("#cerrar");
+	
+	abrir.addEventListener("click", () => {
+	nav?.classList.add("visible");
+	});
+	
+	cerrar.addEventListener("click", () => {
+	nav.classList.remove("visible");
+	});
+</script>
+</body>
 
 <header class="encabezado">
 	<div class="contenedor_menu">
@@ -5,21 +20,26 @@
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 		</div>
-		<div class="barras">
-			<div class="menu-icono">
-				<i class="fa-solid fa-bars"></i>
-			</div>
-				<ul class="menu-horizontal">
-					<li><a href="/">Inicio</a></li>
-					<li><a href="/">inscripción</a>
-					<ul class="menu-vertical">
-						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
+		<script src="https://kit.fontawesome.com/3cc8c30ab5.js" 
+			crossorigin="anonymous"></script>
+
+			<div class="barras">
+				<button id="abrir" class="abrir-menu">abrir</button>
+				<nav class="nav" id="nav" >
+					<button id="cerrar" class="cerrar-menu">cerrar</button>
+					<ul class="menu-horizontal">
+						<li><a href="/">Inicio</a></li>
+						<li><a href="/">Inscripción</a>
+							<ul class="menu-vertical">
+								<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
+							</ul>
+						</li>
+						<li><a href="./inicio_sesion">Inicia sesión</a></li>
+						<li><a href="./quejas">Quejas</a></li>
 					</ul>
-				    </li>
-				    <li><a href="./inicio_sesion">Inicia sesión</a></li>
-				    <li><a href="./quejas">Quejas</a></li>
-			    </ul>
-		</div>
+				</nav>
+			</div>
+
 	</div>
 	<br />
 	<br />
@@ -142,6 +162,29 @@
 		list-style: none;
 	}
 
+/*
+	.checkbox, .icons{
+		height: 24px;
+		width: 24px;
+		position: absolute;
+		top: 10px;
+		right: 12px;
+		cursor: pointer;
+	}
+	.icons{
+		pointer-events:none;
+		font-size: 23px;
+		
+	}
+
+	.checkbox{
+		opacity: 0;
+	}
+
+	.checkbox:checked ~ .menu-horizontal{
+	
+	}
+	*/
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
@@ -154,7 +197,6 @@
 		z-index: 1;
 		position: relative;
 		}
-
 	.contenedor_menu{ 
 		max-width: 1200px;
 		height: 60px;
@@ -209,6 +251,89 @@
 		display: block;
 	}
 
+	.abrir-menu, .cerrar-menu{
+		display: none;
+	}
+
+	@media screen and (max-width:900px){
+		.abrir-menu, .cerrar-menu{
+			display: block;
+			cursor: pointer;
+		}
+		.nav{
+			display: none;
+		}
+		.nav{
+			opacity: 0;
+			visibility: hidden;
+
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			gap: 1rem;
+			position: absolute;
+			flex-direction: column;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			align-items: end;
+			background-color: rgb(27, 27, 27);
+			padding: 2rem;
+			z-index: 1;
+			box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+		}
+
+		.menu-horizontal{
+			flex-direction: column;
+			align-items: end;
+		}
+
+		.nav.visible{
+			opacity: 1;
+			visibility: visible;
+			display: block;
+		}
+		 
+	    .menu-horizontal li a {
+			color: black;
+		}
+	}
+	/*@media screen and (max-width:900px){
+		.encabezado{
+			padding:40px;
+		}
+
+		.checkbox, .icons{
+			display: block;
+		}
+		.icons{
+			display: block;
+		}
+		.checkbox:checked ~ .menu-horizontal{
+		display: block;
+	}
+
+		.barras{
+			height: 100%;
+			display: flex;
+			justify-content: space-between;
+			align-items:center;
+			flex-wrap: wrap;
+			position:relative;
+		}
+		.barras .menu-horizontal{
+			background-color: blue;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.barras .menu-horizontal li a {
+			color: black;
+		}
+	}
 /*otro*/
 	.cover{
 		max-width: 1200px;
@@ -229,12 +354,6 @@
 		width: 50%;
 		font-size: 18px;
 		color: yellow;
-	}
-	
-	@media screen and (max-width:1200px){
-		.encabezado{
-			padding:40px;
-		}
 	}
 
 	/*otra cosa*/
