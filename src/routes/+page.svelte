@@ -161,30 +161,6 @@
 		text-decoration: none;
 		list-style: none;
 	}
-
-/*
-	.checkbox, .icons{
-		height: 24px;
-		width: 24px;
-		position: absolute;
-		top: 10px;
-		right: 12px;
-		cursor: pointer;
-	}
-	.icons{
-		pointer-events:none;
-		font-size: 23px;
-		
-	}
-
-	.checkbox{
-		opacity: 0;
-	}
-
-	.checkbox:checked ~ .menu-horizontal{
-	
-	}
-	*/
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
@@ -298,43 +274,7 @@
 			color: black;
 		}
 	}
-	/*@media screen and (max-width:900px){
-		.encabezado{
-			padding:40px;
-		}
 
-		.checkbox, .icons{
-			display: block;
-		}
-		.icons{
-			display: block;
-		}
-		.checkbox:checked ~ .menu-horizontal{
-		display: block;
-	}
-
-		.barras{
-			height: 100%;
-			display: flex;
-			justify-content: space-between;
-			align-items:center;
-			flex-wrap: wrap;
-			position:relative;
-		}
-		.barras .menu-horizontal{
-			background-color: blue;
-			position: absolute;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		.barras .menu-horizontal li a {
-			color: black;
-		}
-	}
-/*otro*/
 	.cover{
 		max-width: 1200px;
 		height: 100%;
