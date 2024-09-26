@@ -1,18 +1,10 @@
-<body>
-<script> 
-	const nav = document.querySelector("#nav");
-	const abrir = document.querySelector("#abrir");
-	const cerrar = document.querySelector("#cerrar");
+
+<script> 	
 	
-	abrir.addEventListener("click", () => {
-	nav?.classList.add("visible");
-	});
+	let ver = false;
 	
-	cerrar.addEventListener("click", () => {
-	nav.classList.remove("visible");
-	});
 </script>
-</body>
+
 
 <header class="encabezado">
 	<div class="contenedor_menu">
@@ -20,13 +12,12 @@
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 		</div>
-		<script src="https://kit.fontawesome.com/3cc8c30ab5.js" 
-			crossorigin="anonymous"></script>
+
 
 			<div class="barras">
-				<button id="abrir" class="abrir-menu">abrir</button>
-				<nav class="nav" id="nav" >
-					<button id="cerrar" class="cerrar-menu">cerrar</button>
+				<button id="abrir" class="abrir-menu" onclick={()=> ver = !ver}>abrir</button>
+				<nav class="nav" class:visible={ver} id="nav" >
+					<button id="cerrar" class="cerrar-menu" onclick={()=> ver = !ver}>cerrar</button>
 					<ul class="menu-horizontal">
 						<li><a href="/">Inicio</a></li>
 						<li><a href="/">Inscripción</a>
@@ -165,7 +156,7 @@
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
 		min-height: 55vh;
-		background-position: center center ;
+		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		align-items: center;
