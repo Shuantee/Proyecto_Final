@@ -254,7 +254,6 @@
 		.nav{
 			opacity: 0;
 			visibility: hidden;
-
 			display: flex;
 			flex-direction: column;
 			align-items: end;
