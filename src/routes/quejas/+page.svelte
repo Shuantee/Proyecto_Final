@@ -1,305 +1,79 @@
-<header class="encabezado">
 
-	<div class="contenedor_menu">
-		<div class="logo">
-			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-		</div>
+<seccion class="cuerpo">
 
-		<div class="barras">
-			<div id="back_menu"></div>
-			<nav>
-				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-				<ul class="menu-horizontal">
-					<li><a href="/">Vuelve al Inicio</a></li>
-					<li><a href="/">inscripción</a>
-					<ul class="menu-vertical">
-						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
-					</ul>
-				    </li>
-				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
-				    <li><a href="/quejas">Quejas</a></li>
-			    </ul>
-			</nav>
-		</div>
-	</div>
-
-	<br />
-	<br />
-	<main>
-		<div class="contenedor-cover">
-			<div class="cover">
-				<div class="text">
-					<h1>QUEJAS</h1>
-		        </div>
-		    </div>
-	    </div>
-    </main>
-</header>
-
-<section>
-<h1>
-    1
-</h1>
-<p>
-    2
-</p>
-        <p>
-            3
-        </p>
-</section>
-
-<section>
-<h1>
-    Imágenes
-</h1>
-<p>
-  se muestra cada imagen son su contenido.
-</p>
-</section>
-
-<section>
-<h1>2</h1>
-<p>
-    1
-</p>
-</section>
-
-<section>
-<h1>oo</h1>
-<p>
-   n 
-</p>
-</section>
-
-<footer class="pie_de_pagina">
-	<div class="container">
-		<div class="footer-link">
-			<div class="img">
-				<img
-					src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-					alt="logo"
-					class="logoa"
-				/>
-				<img
-					src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702846/miproyecto/k123hi9vn2o4ns9jevqt.jpg"
-					alt="lola"
-					class="lola"
-				/>
-			</div>
-			<div class="link">
-				<h4>Compañía</h4>
-				<ul>
-					<li><a href="/">señor1</a></li>
-					<li><a href="/">señor2</a></li>
-					<li><a href="/">señora3</a></li>
-				</ul>
-			</div>
-			<div class="link">
-				<h4>Compañía</h4>
-				<ul>
-					<li><a href="/">señor4</a></li>
-					<li><a href="/">señor5</a></li>
-				</ul>
-			</div>
-			<div class="link">
-				<h4>Queja</h4>
-				<ul>
-					<li><a href="/">Inquietudes</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
-
-
-<style>
-	
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		text-decoration: none;
-		list-style: none;
-	}
-
-	
-	.encabezado {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
-		min-height: 55vh;
-		background-position: center center ;
-		background-repeat: no-repeat;
-		background-size: cover;
-		align-items: center;
-		padding: 40px;
-		z-index: 1;
-		}
-
-	.contenedor_menu{ 
-		max-width: 1200px;
-		height: 100%;
-		margin: auto;
-		display: flex;
-		justify-content: space-between;
-	}
-	.logo{
-		height:100px;
-		display: flex;
-		align-items: center;
-	}
-	.logo img {
-		width: 95px;
-		border-radius: 60%;
-		position: relative;
-		font-size: 25px;
-	}
-
-	.barras {
-		display: flex;
-		align-items: center;
-	}
-
-	.barras .menu-horizontal {
-		display: flex;
-		justify-content: space-between;
-	}
-	.barras .menu-horizontal li{
-		margin-left: 36px;
-	}
-
-	.barras .menu-horizontal li a {
-		font-size: 16px;
-		color: white;
-		margin-left: 36px;
-		display: block;
-		text-transform: uppercase;
-	}
-
-	.barras nav img{
-		display: none;
-	}
-	.encabezado li:hover {
-		background: rgb(0, 41, 80); 
-	}
-
-	.barras .menu-horizontal .menu-vertical {
-		position: absolute;
-		display: none;
-		width: 200px;
-		background-color: rgb(107, 107, 104);
-	}
-
-	.encabezado .menu-horizontal li:hover .menu-vertical {
-		display: block;
-	}
-	
-
-
-    .contenedor-cover{
-		width: 100%;
-		height: 800%;
-		padding: 40px;
-	}
-
-	.cover{
-		max-width: 1200px;
-		height: 100%;
-		margin: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-
-	.cover .text h1{
-		width: 50%;
-		font-size: 36px;
-		font-weight: 600;
-		color:white;
-	}
-
-
-	.contenedor-cover .text h1 {
-		color:white;
-		width: 50%;
-		font-size: 36px;
-		text-transform: uppercase;
-	
-	}
-	@media screen and (max-width:1200px){
-
-		.encabezado{
-			padding:40px;
-		}
-	}
-    .pie_de_pagina {
-		background-color: rgb(39, 82, 45);
-	}
-
-	.pie_de_pagina .img {
-		text-align: center;
-	}
-
-	.pie_de_pagina img {
-		margin-bottom: 10px;
-	}
-
-	.pie_de_pagina .link a {
-		display: block;
-		margin: 20px;
-	}
-
-	.pie_de_pagina .logoa {
-		width: 65px;
-		border-radius: 50%;
-		position: relative;
-	}
-	.pie_de_pagina .lola {
-		width: 65px;
-		border-radius: 50%;
-		position: relative;
-	}
-
-	.pie_de_pagina .img {
-		margin-top: 50px;
-	}
-
-	.pie_de_pagina .footer-link {
-		display: flex;
-		justify-content: space-between;
-		width: 50%;
-		line-height: 5px;
-		margin-left: 46px;
-		text-align: center;
-	}
-
-	.link {
-		margin-left: 35px;
-		margin-top: 20px;
-		text-align: center;
-	}
-	.footer-link h4 {
-		position: relative;
-		margin-bottom: 30px;
-		font-weight: 400;
-		font-size: 15px;
-		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-		color: rgb(245, 255, 110);
-		text-align: center;
-	}
-
-	.footer-link li a {
-		position: relative;
-		font-weight: 400;
-		font-size: 15px;
-		font-family: Century Schoolbook;
-		color: rgb(253, 253, 253);
-	}
-
-	.pie_de_pagina a:hover {
-		background: rgb(146, 0, 0);
-		padding: 10px;
+	<section>
+	  <h1>PQR Lola</h1>
+	  <form action="/submit-pqrs" method="POST">
 		
-	}
-</style>
+		<label for="tipo-solicitud">Tipo de solicitud:</label>
+		<select id="tipo-solicitud" name="tipo-solicitud" required>
+		  <option value="">Selecciona el tipo de solicitud</option>
+		  <option value="peticion">Petición</option>
+		  <option value="queja">Queja</option>
+		  <option value="reclamo">Reclamo</option>
+		  <option value="sugerencia">Sugerencia</option>
+		</select>
+		
+		
+		<label for="detalle-solicitud">Escribe tu solicitud aqui:</label>
+		<textarea id="detalle-solicitud" name="detalle-solicitud" rows="6" placeholder="Describe tu solicitud" required></textarea>
+		
+		<input type="submit" value="Enviar">
+	</form>
+	</section>
+</seccion>
+  <style>
+    .cuerpo {
+      background-color: #f0f8ff; 
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    section {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 400px;
+      text-align: center;
+    }
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    label {
+      font-size: 18px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    select, textarea, input[type="submit"] {
+      font-size: 16px;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+

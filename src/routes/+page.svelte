@@ -1,18 +1,11 @@
-<body>
-<script> 
-	const nav = document.querySelector("#nav");
-	const abrir = document.querySelector("#abrir");
-	const cerrar = document.querySelector("#cerrar");
+
+<script> 	
 	
-	abrir.addEventListener("click", () => {
-	nav?.classList.add("visible");
-	});
+	let ver = false;
+ 
 	
-	cerrar.addEventListener("click", () => {
-	nav.classList.remove("visible");
-	});
 </script>
-</body>
+
 
 <header class="encabezado">
 	<div class="contenedor_menu">
@@ -20,13 +13,22 @@
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
 				alt="logo">
 		</div>
-		<script src="https://kit.fontawesome.com/3cc8c30ab5.js" 
-			crossorigin="anonymous"></script>
+
 
 			<div class="barras">
-				<button id="abrir" class="abrir-menu">abrir</button>
-				<nav class="nav" id="nav" >
-					<button id="cerrar" class="cerrar-menu">cerrar</button>
+				
+				<button id="abrir" class="abrir-menu" onclick={()=> ver = !ver}>
+					<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+					  </svg>
+				</button>
+				<nav class="nav" class:visible={ver} id="nav" >
+					<button id="cerrar" class="cerrar-menu" onclick={()=> ver = !ver}>
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+							<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+							
+						</svg>
+					</button>
 					<ul class="menu-horizontal">
 						<li><a href="/">Inicio</a></li>
 						<li><a href="/">Inscripción</a>
@@ -66,6 +68,13 @@
 			que sepas cuál de los dos refirgerios escoger, si complemento o vaso de leche.
 		</b>
 	    </p>
+		<p>
+			<b>
+				También, hay un espacio, llamado quejas, en donde puedas decir, soltar, manifestar, 
+				comunicar, expresar, desahogar, opinar, proponer acerca de lo que no estas de acuerdo, 
+				de la inconformidad, problema, dificultad que tienes del alimento.
+			</b>
+		</p>
 	    <br />
 	    <br />
 
@@ -165,7 +174,7 @@
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
 		min-height: 55vh;
-		background-position: center center ;
+		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		align-items: center;
@@ -229,6 +238,9 @@
 
 	.abrir-menu, .cerrar-menu{
 		display: none;
+		border: 0;
+		background: 0;
+		color: rgb(255, 255, 255);
 	}
 
 	@media screen and (max-width:900px){
@@ -242,7 +254,6 @@
 		.nav{
 			opacity: 0;
 			visibility: hidden;
-
 			display: flex;
 			flex-direction: column;
 			align-items: end;
@@ -256,7 +267,7 @@
 			background-color: rgb(27, 27, 27);
 			padding: 2rem;
 			z-index: 1;
-			box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+			box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.5);
 		}
 
 		.menu-horizontal{
@@ -272,6 +283,10 @@
 		 
 	    .menu-horizontal li a {
 			color: black;
+			margin-top: 25px;
+			
+		}
+		.menu-horizontal a:hover{
 		}
 	}
 
