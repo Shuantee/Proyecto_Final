@@ -1,3 +1,9 @@
+<script> 	
+	
+	let ver = false;
+ 
+	
+</script>
 <header class="encabezado">
 
 	<div class="contenedor_menu">
@@ -7,6 +13,7 @@
 		</div>
 
 		<div class="barras">
+			
 			<div id="back_menu"></div>
 			<nav>
 				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"

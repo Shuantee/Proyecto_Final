@@ -1,29 +1,43 @@
+<script> 	
+	
+	let ver = false;
+ 
+	
+</script>
 <header class="encabezado">
-
-	<div class="contenedor_menu">
-		<div class="logo">
-			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-		</div>
-
-		<div class="barras">
-			<div id="back_menu"></div>
-			<nav>
+		<div class="contenedor_menu">
+			<div class="logo">
 				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-				<ul class="menu-horizontal">
-					<li><a href="/">Vuelve al Inicio</a></li>
-					<li><a href="/">inscripción</a>
-					<ul class="menu-vertical">
-						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
-					</ul>
-				    </li>
-				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
-				    <li><a href="/quejas">Quejas</a></li>
-			    </ul>
-			</nav>
-		</div>
-	</div>
+					alt="logo">
+			</div>
+	
+	
+				<div class="barras">
+					
+					<button id="abrir" class="abrir-menu" onclick={()=> ver = !ver}>
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+							<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+						  </svg>
+					</button>
+					<nav class="nav" class:visible={ver} id="nav" >
+						<button id="cerrar" class="cerrar-menu" onclick={()=> ver = !ver}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+								<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+								
+							</svg>
+						</button>
+						<ul class="menu-horizontal">
+							<li><a href="/">Inicio</a></li>
+							<li><a href="/">Inscripción</a>
+								<ul class="menu-vertical">
+									<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
+								</ul>
+							</li>
+							<li><a href="./inicio_sesion">Inicia sesión</a></li>
+							<li><a href="./quejas">Quejas</a></li>
+						</ul>
+					</nav>
+				</div>
 
 	<br />
 	<br />
@@ -198,9 +212,6 @@
 		text-transform: uppercase;
 	}
 
-	.barras nav img{
-		display: none;
-	}
 	.encabezado li:hover {
 		background: rgb(0, 41, 80); 
 	}
@@ -214,6 +225,61 @@
 
 	.encabezado .menu-horizontal li:hover .menu-vertical {
 		display: block;
+	}
+
+	.abrir-menu, .cerrar-menu{
+		display: none;
+		border: 0;
+		background: 0;
+		color: rgb(255, 255, 255);
+	}
+
+	@media screen and (max-width:900px){
+		.abrir-menu, .cerrar-menu{
+			display: block;
+			cursor: pointer;
+		}
+		.nav{
+			display: none;
+		}
+		.nav{
+			opacity: 0;
+			visibility: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			gap: 1rem;
+			position: absolute;
+			flex-direction: column;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			align-items: end;
+			background-color: rgb(27, 27, 27);
+			padding: 2rem;
+			z-index: 1;
+			box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.5);
+		}
+
+		.menu-horizontal{
+			flex-direction: column;
+			align-items: end;
+		}
+
+		.nav.visible{
+			opacity: 1;
+			visibility: visible;
+			display: block;
+		}
+		 
+	    .menu-horizontal li a {
+			color: black;
+			margin-top: 25px;
+			
+		}
+		.menu-horizontal {
+			
+		}
 	}
 	
     .contenedor-cover{

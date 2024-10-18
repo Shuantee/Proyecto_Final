@@ -1,12 +1,12 @@
 {
   "version": "7",
-  "dialect": "postgresql",
+  "dialect": "sqlite",
   "entries": [
     {
       "idx": 0,
       "version": "6",
-      "when": 1726168973620,
-      "tag": "0000_organic_meteorite",
+      "when": 1729284094268,
+      "tag": "0000_unique_baron_zemo",
       "breakpoints": true
     }
   ]

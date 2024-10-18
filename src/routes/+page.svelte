@@ -286,7 +286,8 @@
 			margin-top: 25px;
 			
 		}
-		.menu-horizontal a:hover{
+		.menu-horizontal {
+			
 		}
 	}
 
@@ -388,6 +389,8 @@
 		padding: 15px 35px;
 		background-color:rgb(39, 82, 45);
 		color:white;
+		text-align: center;
+		position: center;
 	}
 
 	.comple {
