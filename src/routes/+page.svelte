@@ -2,7 +2,8 @@
 <script> 	
 	
 	let ver = false;
- 
+	let {data} = $props()
+    console.log(data.miPae)
 	
 </script>
 
@@ -80,6 +81,146 @@
 		box-sizing: border-box;
 		text-decoration: none;
 		list-style: none;
+	}
+	.encabezado {
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
+		min-height: 55vh;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		align-items: center;
+		padding: 40px;
+		z-index: 1;
+		position: relative;
+		}
+	.contenedor_menu{ 
+		max-width: 1200px;
+		height: 60px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+	}
+	.logo{
+		height:100px;
+		display: flex;
+		align-items: center;
+	}
+	.logo img {
+		width: 95px;
+		border-radius: 60%;
+		position: relative;
+		font-size: 25px;
+	}
+
+	.barras {
+		display: flex;
+		align-items: center;
+	}
+
+	.barras .menu-horizontal {
+		display: flex;
+		justify-content: space-between;
+	}
+	.barras .menu-horizontal li{
+		margin-left: 36px;
+	}
+
+	.barras .menu-horizontal li a {
+		font-size: 16px;
+		color: rgb(255, 255, 255);
+		margin-left: 36px;
+		display: block;
+		text-transform: uppercase;
+	}
+	.encabezado li:hover {
+		background: rgb(0, 41, 80); 
+	}
+
+	.barras .menu-horizontal .menu-vertical {
+		position: absolute;
+		display: none;
+		width: 200px;
+		background-color: rgb(114, 114, 112);
+	}
+
+	.encabezado .menu-horizontal li:hover .menu-vertical {
+		display: block;
+	}
+
+	.abrir-menu, .cerrar-menu{
+		display: none;
+		border: 0;
+		background: 0;
+		color: rgb(255, 255, 255);
+	}
+
+	@media screen and (max-width:900px){
+		.abrir-menu, .cerrar-menu{
+			display: block;
+			cursor: pointer;
+		}
+		.nav{
+			display: none;
+		}
+		.nav{
+			opacity: 0;
+			visibility: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: end;
+			gap: 1rem;
+			position: absolute;
+			flex-direction: column;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			align-items: end;
+			background-color: rgb(27, 27, 27);
+			padding: 2rem;
+			z-index: 1;
+			box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.5);
+		}
+
+		.menu-horizontal{
+			flex-direction: column;
+			align-items: end;
+		}
+
+		.nav.visible{
+			opacity: 1;
+			visibility: visible;
+			display: block;
+		}
+		 
+	    .menu-horizontal li a {
+			color: black;
+			margin-top: 25px;
+			
+		}
+		.menu-horizontal a:hover{
+		}
+	}
+
+	.cover{
+		max-width: 1200px;
+		height: 100%;
+		margin: auto;
+	}
+	.cover .text{
+		max-width: 400px;
+	}
+	.cover .text h1{
+		width: 50%;
+		font-size: 36px;
+		font-weight: 600;
+		color:white;
+		margin-top: 40px;
+	}
+	.cover .text p{
+		width: 50%;
+		font-size: 18px;
+		color: yellow;
 	}
 
 	/*otra cosa*/
@@ -159,6 +300,8 @@
 		padding: 15px 35px;
 		background-color:rgb(39, 82, 45);
 		color:white;
+		text-align: center;
+		position: center;
 	}
 
 	.comple {

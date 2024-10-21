@@ -25,7 +25,8 @@
       "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {},
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     },
     "grado": {
       "name": "grado",
@@ -62,7 +63,8 @@
           "onUpdate": "no action"
         }
       },
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     },
     "estudiante": {
       "name": "estudiante",
@@ -106,7 +108,8 @@
           "onUpdate": "no action"
         }
       },
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     },
     "quejas": {
       "name": "quejas",
@@ -164,19 +167,6 @@
       "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {
-        "quejas_id_pae_pae_id_fk": {
-          "name": "quejas_id_pae_pae_id_fk",
-          "tableFrom": "quejas",
-          "tableTo": "pae",
-          "columnsFrom": [
-            "id_pae"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        },
         "quejas_id_estudiantes_estudiante_id_fk": {
           "name": "quejas_id_estudiantes_estudiante_id_fk",
           "tableFrom": "quejas",
@@ -189,51 +179,13 @@
           ],
           "onDelete": "no action",
           "onUpdate": "no action"
-        }
-      },
-      "uniqueConstraints": {}
-    },
-    "pae": {
-      "name": "pae",
-      "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": false
         },
-        "id_foto": {
-          "autoincrement": false,
-          "name": "id_foto",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "tipo_alimento": {
-          "autoincrement": false,
-          "name": "tipo_alimento",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "id_menu": {
-          "autoincrement": false,
-          "name": "id_menu",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        }
-      },
-      "compositePrimaryKeys": {},
-      "indexes": {},
-      "foreignKeys": {
-        "pae_id_menu_menu_id_fk": {
-          "name": "pae_id_menu_menu_id_fk",
-          "tableFrom": "pae",
-          "tableTo": "menu",
+        "quejas_id_pae_pae_id_fk": {
+          "name": "quejas_id_pae_pae_id_fk",
+          "tableFrom": "quejas",
+          "tableTo": "pae",
           "columnsFrom": [
-            "id_menu"
+            "id_pae"
           ],
           "columnsTo": [
             "id"
@@ -242,7 +194,8 @@
           "onUpdate": "no action"
         }
       },
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     },
     "ingrediente": {
       "name": "ingrediente",
@@ -265,10 +218,11 @@
       "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {},
-      "uniqueConstraints": {}
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     },
-    "alimento": {
-      "name": "alimento",
+    "pae": {
+      "name": "pae",
       "columns": {
         "id": {
           "autoincrement": false,
@@ -277,61 +231,29 @@
           "primaryKey": true,
           "notNull": false
         },
-        "id_quejas": {
+        "idFoto": {
           "autoincrement": false,
-          "name": "id_quejas",
+          "name": "idFoto",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
-        "id_pae": {
+        "tipoAlimento": {
           "autoincrement": false,
-          "name": "id_pae",
-          "type": "integer",
+          "name": "tipoAlimento",
+          "type": "text",
           "primaryKey": false,
-          "notNull": false
-        },
-        "id_tipo_alimento": {
-          "autoincrement": false,
-          "name": "id_tipo_alimento",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "compositePrimaryKeys": {},
       "indexes": {},
-      "foreignKeys": {
-        "alimento_id_pae_pae_id_fk": {
-          "name": "alimento_id_pae_pae_id_fk",
-          "tableFrom": "alimento",
-          "tableTo": "pae",
-          "columnsFrom": [
-            "id_pae"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        },
-        "alimento_id_quejas_quejas_id_fk": {
-          "name": "alimento_id_quejas_quejas_id_fk",
-          "tableFrom": "alimento",
-          "tableTo": "quejas",
-          "columnsFrom": [
-            "id_quejas"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
-      "uniqueConstraints": {}
+      "foreignKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
     }
   },
+  "views": {},
   "enums": {},
   "_meta": {
     "schemas": {},

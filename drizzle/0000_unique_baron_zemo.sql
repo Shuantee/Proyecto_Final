@@ -27,16 +27,8 @@ CREATE TABLE `quejas` (
 	`problema` text,
 	`nom_queja` text,
 	`tipo_alimento` text,
-	FOREIGN KEY (`id_pae`) REFERENCES `pae`(`id`) ON UPDATE no action ON DELETE no action,
-	FOREIGN KEY (`id_estudiantes`) REFERENCES `estudiante`(`id`) ON UPDATE no action ON DELETE no action
-);
---> statement-breakpoint
-CREATE TABLE `pae` (
-	`id` integer PRIMARY KEY,
-	`id_foto` integer,
-	`tipo_alimento` text,
-	`id_menu` integer,
-	FOREIGN KEY (`id_menu`) REFERENCES `menu`(`id`) ON UPDATE no action ON DELETE no action
+	FOREIGN KEY (`id_estudiantes`) REFERENCES `estudiante`(`id`) ON UPDATE no action ON DELETE no action,
+	FOREIGN KEY (`id_pae`) REFERENCES `pae`(`id`) ON UPDATE no action ON DELETE no action
 );
 --> statement-breakpoint
 CREATE TABLE `ingrediente` (
@@ -44,13 +36,10 @@ CREATE TABLE `ingrediente` (
 	`nom_ingrediente` text
 );
 --> statement-breakpoint
-CREATE TABLE `alimento` (
+CREATE TABLE `pae` (
 	`id` integer PRIMARY KEY,
-	`id_quejas` integer,
-	`id_pae` integer,
-	`id_tipo_alimento` integer,
-	FOREIGN KEY (`id_pae`) REFERENCES `pae`(`id`) ON UPDATE no action ON DELETE no action,
-	FOREIGN KEY (`id_quejas`) REFERENCES `quejas`(`id`) ON UPDATE no action ON DELETE no action
+	`idFoto` integer NOT NULL,
+	`tipoAlimento` text NOT NULL
 );
 
 */
