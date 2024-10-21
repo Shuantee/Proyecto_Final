@@ -6,8 +6,6 @@
 	
 </script>
 
-
-
 <br />
 <br />
 <section class="contenido1">
