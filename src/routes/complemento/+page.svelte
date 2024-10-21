@@ -1,52 +1,10 @@
-<<<<<<< HEAD
 <script> 	
 	
 	let ver = false;
  
 	
 </script>
-<header class="encabezado">
 
-	<div class="contenedor_menu">
-		<div class="logo">
-			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-		</div>
-
-		<div class="barras">
-			
-			<div id="back_menu"></div>
-			<nav>
-				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-				<ul class="menu-horizontal">
-					<li><a href="/">Vuelve al Inicio</a></li>
-					<li><a href="/">inscripción</a>
-					<ul class="menu-vertical">
-						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
-					</ul>
-				    </li>
-				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
-				    <li><a href="/quejas">Quejas</a></li>
-			    </ul>
-			</nav>
-		</div>
-	</div>
-
-	<br />
-	<br />
-	<main>
-		<div class="contenedor-cover">
-			<div class="cover">
-				<div class="text">
-					<h1>complemento</h1>
-		        </div>
-		    </div>
-	    </div>
-    </main>
-</header>
-=======
->>>>>>> 7b0dcac81e7f154833c8e6e4f0635b339453b018
 
 <section class="pregunta">
 <h1>
