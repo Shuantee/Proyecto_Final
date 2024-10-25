@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <script> 	
 	
 	let ver = false;
@@ -52,9 +52,7 @@
 	    </div>
     </main>
 </header>
-=======
 
->>>>>>> 7b0dcac81e7f154833c8e6e4f0635b339453b018
 <br>
 <section class="pregunta">
 	<h1>
@@ -125,7 +123,6 @@
 		text-decoration: none;
 		list-style: none;
 	}
-<<<<<<< HEAD
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
@@ -276,8 +273,6 @@
 			padding:40px;
 		}
 	}
-=======
->>>>>>> 7b0dcac81e7f154833c8e6e4f0635b339453b018
 
 	.pregunta h1{
 		padding: 20px;
@@ -305,7 +300,4 @@
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
 }
-
-
-
 </style>

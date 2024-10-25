@@ -3,10 +3,10 @@
 
 	<section>
 	  <h1>PQR Lola</h1>
-	  <form action="/submit-pqrs" method="POST">
+	  <form action="?/quejas" method="POST">
 		
 		<label for="tipo-solicitud">Tipo de solicitud:</label>
-		<select id="tipo-solicitud" name="tipo-solicitud" required>
+		<select id="tipo-solicitud" name="tipo" required>
 		  <option value="">Selecciona el tipo de solicitud</option>
 		  <option value="peticion">Petición</option>
 		  <option value="queja">Queja</option>
@@ -16,7 +16,7 @@
 		
 		
 		<label for="detalle-solicitud">Escribe tu solicitud aqui:</label>
-		<textarea id="detalle-solicitud" name="detalle-solicitud" rows="6" placeholder="Describe tu solicitud" required></textarea>
+		<textarea id="detalle-solicitud" name="problema" rows="6" placeholder="Describe tu solicitud" required></textarea>
 		
 		<input type="submit" value="Enviar">
 	</form>

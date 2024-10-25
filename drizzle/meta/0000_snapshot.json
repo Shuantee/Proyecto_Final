@@ -66,129 +66,64 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "estudiante": {
-      "name": "estudiante",
+    "Quejas": {
+      "name": "Quejas",
       "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
+        "id_queja": {
+          "autoincrement": true,
+          "name": "id_queja",
           "type": "integer",
           "primaryKey": true,
           "notNull": false
         },
-        "nom_estudiante": {
+        "id_estudiante": {
           "autoincrement": false,
-          "name": "nom_estudiante",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "id_grupo": {
-          "autoincrement": false,
-          "name": "id_grupo",
+          "name": "id_estudiante",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false
-        }
-      },
-      "compositePrimaryKeys": {},
-      "indexes": {},
-      "foreignKeys": {
-        "estudiante_id_grupo_grupo_id_fk": {
-          "name": "estudiante_id_grupo_grupo_id_fk",
-          "tableFrom": "estudiante",
-          "tableTo": "grupo",
-          "columnsFrom": [
-            "id_grupo"
-          ],
-          "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        }
-      },
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
-    "quejas": {
-      "name": "quejas",
-      "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": false
-        },
-        "id_estudiantes": {
-          "autoincrement": false,
-          "name": "id_estudiantes",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "id_pae": {
-          "autoincrement": false,
-          "name": "id_pae",
-          "type": "integer",
-          "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "fecha": {
           "autoincrement": false,
           "name": "fecha",
-          "type": "numeric",
+          "type": "text",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
+        },
+        "alimento": {
+          "autoincrement": false,
+          "name": "alimento",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tipo_queja": {
+          "autoincrement": false,
+          "name": "tipo_queja",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
         },
         "problema": {
           "autoincrement": false,
           "name": "problema",
           "type": "text",
           "primaryKey": false,
-          "notNull": false
-        },
-        "nom_queja": {
-          "autoincrement": false,
-          "name": "nom_queja",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "tipo_alimento": {
-          "autoincrement": false,
-          "name": "tipo_alimento",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
+          "notNull": true
         }
       },
       "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {
-        "quejas_id_estudiantes_estudiante_id_fk": {
-          "name": "quejas_id_estudiantes_estudiante_id_fk",
-          "tableFrom": "quejas",
-          "tableTo": "estudiante",
+        "Quejas_id_estudiante_Estudiantes_id_estudiante_fk": {
+          "name": "Quejas_id_estudiante_Estudiantes_id_estudiante_fk",
+          "tableFrom": "Quejas",
+          "tableTo": "Estudiantes",
           "columnsFrom": [
-            "id_estudiantes"
+            "id_estudiante"
           ],
           "columnsTo": [
-            "id"
-          ],
-          "onDelete": "no action",
-          "onUpdate": "no action"
-        },
-        "quejas_id_pae_pae_id_fk": {
-          "name": "quejas_id_pae_pae_id_fk",
-          "tableFrom": "quejas",
-          "tableTo": "pae",
-          "columnsFrom": [
-            "id_pae"
-          ],
-          "columnsTo": [
-            "id"
+            "id_estudiante"
           ],
           "onDelete": "no action",
           "onUpdate": "no action"
@@ -197,51 +132,48 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "ingrediente": {
-      "name": "ingrediente",
+    "Estudiantes": {
+      "name": "Estudiantes",
       "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
+        "id_estudiante": {
+          "autoincrement": true,
+          "name": "id_estudiante",
           "type": "integer",
           "primaryKey": true,
           "notNull": false
         },
-        "nom_ingrediente": {
+        "nombre": {
           "autoincrement": false,
-          "name": "nom_ingrediente",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        }
-      },
-      "compositePrimaryKeys": {},
-      "indexes": {},
-      "foreignKeys": {},
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
-    "pae": {
-      "name": "pae",
-      "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": false
-        },
-        "idFoto": {
-          "autoincrement": false,
-          "name": "idFoto",
-          "type": "integer",
+          "name": "nombre",
+          "type": "text(100)",
           "primaryKey": false,
           "notNull": true
         },
-        "tipoAlimento": {
+        "grupo": {
           "autoincrement": false,
-          "name": "tipoAlimento",
-          "type": "text",
+          "name": "grupo",
+          "type": "text(10)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "grado": {
+          "autoincrement": false,
+          "name": "grado",
+          "type": "text(10)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pin": {
+          "autoincrement": false,
+          "name": "pin",
+          "type": "text(10)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "correo": {
+          "autoincrement": false,
+          "name": "correo",
+          "type": "text(100)",
           "primaryKey": false,
           "notNull": true
         }

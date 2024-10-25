@@ -1,10 +1,11 @@
-<<<<<<< HEAD
+
 <script> 	
 	
 	let ver = false;
  
 	
 </script>
+
 <header class="encabezado">
 
 	<div class="contenedor_menu">
@@ -46,7 +47,6 @@
     </main>
 </header>
 =======
->>>>>>> 7b0dcac81e7f154833c8e6e4f0635b339453b018
 
 <section class="pregunta">
 <h1>
