@@ -1,3 +1,9 @@
+// svelte-ignore script_context_deprecated
+<script>
+	import { page } from '$app/stores';
+</script>
+
+
 <header class="encabezado">
 
 	<div class="contenedor_menu">
@@ -31,7 +37,17 @@
 		<div class="contenedor-cover">
 			<div class="cover">
 				<div class="text">
-					<h1>hola</h1>
+					<h1>
+						{#if $page.url.pathname === '/'}
+						Refrigerios Lola
+						{:else if $page.url.pathname === '/complemento'}
+						Complemento
+						{:else if $page.url.pathname === '/vaso_leche'}
+						Vaso de Leche
+						{:else if $page.url.pathname === '/quejas'}
+						Quejas
+						{/if}
+					</h1>
 		        </div>
 		    </div>
 	    </div>
