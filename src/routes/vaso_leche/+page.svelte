@@ -13,7 +13,7 @@
 	</h1>
 </section>
 <section class="contener">
-	<div class="slider-wrapper">
+	<div class="slider-wrapper ">
 		<div class="slider">
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721751/miproyecto/ubqfxcpu6c2wetz3jamw.jpg" alt="">
 			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721727/miproyecto/wbssonvbrggvrsw3gzk9.jpg" alt="">
