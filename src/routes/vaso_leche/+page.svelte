@@ -6,40 +6,6 @@
 	
 </script>
 <header class="encabezado">
-		<div class="contenedor_menu">
-			<div class="logo">
-				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-					alt="logo">
-			</div>
-	
-	
-				<div class="barras">
-					
-					<button id="abrir" class="abrir-menu" onclick={()=> ver = !ver}>
-						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-							<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-						  </svg>
-					</button>
-					<nav class="nav" class:visible={ver} id="nav" >
-						<button id="cerrar" class="cerrar-menu" onclick={()=> ver = !ver}>
-							<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-								<path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-								
-							</svg>
-						</button>
-						<ul class="menu-horizontal">
-							<li><a href="/">Inicio</a></li>
-							<li><a href="/">Inscripción</a>
-								<ul class="menu-vertical">
-									<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
-								</ul>
-							</li>
-							<li><a href="./inicio_sesion">Inicia sesión</a></li>
-							<li><a href="./quejas">Quejas</a></li>
-						</ul>
-					</nav>
-				</div>
-
 	<br />
 	<br />
 	<main>
@@ -52,6 +18,7 @@
 	    </div>
     </main>
 </header>
+
 
 <br>
 <section class="pregunta">
@@ -123,6 +90,7 @@
 		text-decoration: none;
 		list-style: none;
 	}
+
 	.encabezado {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
@@ -273,6 +241,7 @@
 			padding:40px;
 		}
 	}
+
 
 	.pregunta h1{
 		padding: 20px;

@@ -37,7 +37,7 @@
 
       <!-- Campo Nombre -->
       <div class="field">
-        <label class="label">Nombre</label>
+        <label class="label"> Nombre</label>
         <div class="control">
           <input
             class="input"

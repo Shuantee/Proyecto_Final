@@ -1,10 +1,12 @@
 
+
 <script> 	
 	
 	let ver = false;
  
 	
 </script>
+
 
 <header class="encabezado">
 
@@ -47,6 +49,9 @@
     </main>
 </header>
 =======
+=======
+
+>>>>>>> 7494c7f75bf66a7a99cb5720bb04b0f4d01d9b78
 
 <section class="pregunta">
 <h1>
