@@ -5,9 +5,6 @@
 	
 	let ver = false;
 	
-	onMount(() => {
-	  console.log(data.miPae);
-	});
   </script>
   
   <section class="section">

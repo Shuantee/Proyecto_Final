@@ -1,10 +1,44 @@
 <script> 	
+import { onDestroy } from 'svelte';	
 	
 	let ver = false;
- 
-	
-</script>
+	let currentIndex = 0;
+  const images = [
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721739/miproyecto/dg597fo7dpsqjopm0tqz.jpg" ,
+			"https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721713/miproyecto/fbqj6jpem2qqcm9lpd4m.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721687/miproyecto/j9ot6uycxcukys6m0iwe.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721671/miproyecto/tizfliojhmphgsqu1hde.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721597/miproyecto/zpkxtt96ymyqvcq1zwk3.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721584/miproyecto/ykukqyks5ycbv6kym2nx.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721539/miproyecto/dssrpechg2uzfudxysur.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721508/miproyecto/ixphpcpxwi4bgezhup4a.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721497/miproyecto/hyyzx73u39j2fx8u3tsy.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721483/miproyecto/h6jspn3xxkp119bmo6wf.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721443/miproyecto/umptturspkmfowpqqnb2.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721433/miproyecto/p734ertdvrjwsovbtv91.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721411/miproyecto/os3qfgtysxxscpvs4kvs.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721382/miproyecto/jx9q99eh98jpi7tgumnh.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721376/miproyecto/cnyuwqthr8rhakmk0qw3.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721367/miproyecto/reji14jtdun7soggxjhh.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721340/miproyecto/ktulillzaumeeh9adjlb.jpg" ,
+	        "https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721327/miproyecto/ullpwk1n9izaqzhl2s0m.jpg" ,
+		];
+  function next() {
+    currentIndex = (currentIndex + 1) % images.length;
+  }
 
+  function prev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+  }
+
+  // Avance automático cada 3 segundos
+  const interval = setInterval(next, 5000);
+
+  // Limpia el intervalo al desmontar el componente
+  onDestroy(() => {
+    clearInterval(interval);
+  });
+</script>
 
 <section class="pregunta">
 <h1>
@@ -13,30 +47,11 @@
 </section>
 <section class="contener">
 	<div class="slider-wrapper">
-		<div class="slider">
-			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721739/miproyecto/dg597fo7dpsqjopm0tqz.jpg" alt="">
-			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721713/miproyecto/fbqj6jpem2qqcm9lpd4m.jpg" alt="">
-	        <img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721687/miproyecto/j9ot6uycxcukys6m0iwe.jpg" alt="">
-	        <img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721671/miproyecto/tizfliojhmphgsqu1hde.jpg" alt="">
-	        <img id="slider-5" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721597/miproyecto/zpkxtt96ymyqvcq1zwk3.jpg" alt="">
-	        <img id="slider-6" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721584/miproyecto/ykukqyks5ycbv6kym2nx.jpg" alt="">
-	        <img id="slider-7" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721539/miproyecto/dssrpechg2uzfudxysur.jpg" alt="">
-	        <img id="slider-8" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721508/miproyecto/ixphpcpxwi4bgezhup4a.jpg" alt="">
-	        <img id="slider-9" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721497/miproyecto/hyyzx73u39j2fx8u3tsy.jpg" alt="">
-	        <img id="slider-10" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721483/miproyecto/h6jspn3xxkp119bmo6wf.jpg" alt="">
-	        <img id="slider-11" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721443/miproyecto/umptturspkmfowpqqnb2.jpg" alt="">
-	        <img id="slider-12" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721433/miproyecto/p734ertdvrjwsovbtv91.jpg" alt="">
-	        <img id="slider-13" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721411/miproyecto/os3qfgtysxxscpvs4kvs.jpg" alt="">
-	        <img id="slider-14" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721382/miproyecto/jx9q99eh98jpi7tgumnh.jpg" alt="">
-	        <img id="slider-15" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721376/miproyecto/cnyuwqthr8rhakmk0qw3.jpg" alt="">
-	        <img id="slider-16" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721367/miproyecto/reji14jtdun7soggxjhh.jpg" alt="">
-	        <img id="slider-17" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721340/miproyecto/ktulillzaumeeh9adjlb.jpg" alt="">
-	        <img id="slider-18" src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724721327/miproyecto/ullpwk1n9izaqzhl2s0m.jpg" alt="">
-
-        </div>
-    </div>
-</section>
-
+	  <button class="arrow prev" on:click={prev}>❮</button>
+	  <img src={images[currentIndex]} alt="Carousel image" />
+	  <button class="arrow next" on:click={next}>❯</button>
+	</div>
+  </section>
 <section>
 
     En las anteriores imagenes se puede observar una serie de alimentos preparados que dan la invitación a contenedor
@@ -108,5 +123,35 @@
 	text-transform: uppercase;
 	font-size: 25px;
 }
-
+.slider-wrapper {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .prev {
+    left: -30px;
+  }
+  
+  .next {
+    right: -30px;
+  }
 </style>
