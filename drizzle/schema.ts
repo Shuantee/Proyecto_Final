@@ -1,13 +1,13 @@
-import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core"
+import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
 
 export const grupo = sqliteTable("grupo", {
-	id: integer().primaryKey(),
-	nomGrup: text("nom_grup"),
+    id: integer().primaryKey(),
+    nomGrup: text("nom_grup"),
 });
 
 export const grado = sqliteTable("grado", {
-	id: integer().primaryKey(),
-	idGrupo: integer("id_grupo").references(() => grupo.id),
+    id: integer().primaryKey(),
+    idGrupo: integer("id_grupo").references(() => grupo.id),
 });
 
 export const quejas = sqliteTable("Quejas", {
@@ -19,7 +19,6 @@ export const quejas = sqliteTable("Quejas", {
     problema: text().notNull(),
 });
 
-
 export const estudiantes = sqliteTable("Estudiantes", {
     idEstudiante: integer("id_estudiante").primaryKey({ autoIncrement: true }),
     nombre: text({ length: 100 }).notNull(),
@@ -27,6 +26,4 @@ export const estudiantes = sqliteTable("Estudiantes", {
     grado: text({ length: 10 }).notNull(),
     pin: text({ length: 10 }).notNull(),
     correo: text({ length: 100 }).notNull(),
-    token: text() // Agregar este campo para solucionar el error de 'token'
-});
-
+}); 

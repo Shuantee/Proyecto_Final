@@ -1,28 +1,37 @@
 <script>
+  import { onMount } from 'svelte';
+
   let name = '';
   let email = '';
   let pin = '';
   let errorMessage = '';
 
   // Función para manejar el login
-  function handleLogin() {
+  async function handleLogin() {
     if (!name || !email || !pin) {
       errorMessage = 'Todos los campos son obligatorios!';
     } else {
       errorMessage = '';
       console.log('Iniciando sesión con:', { name, email, pin });
-      // Aquí puedes añadir la lógica de autenticación
+
+      // En teoria aquí es la función pa llamar al API
+      const response = await fetch('/page.server.ts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, pin }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Inicio de sesión exitoso:', data);
+      } else {
+        errorMessage = 'Credenciales incorrectas';
+      }
     }
   }
 </script>
-
-<style>
-  .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-</style>
 
 <section class="section">
   <div class="login-container">

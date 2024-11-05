@@ -1,24 +1,22 @@
-import type { RequestEvent } from '@sveltejs/kit';
-import { db } from '$lib/server/database/client';
 import { quejas } from '$lib/server/database/schema';
+import { db } from '$lib/server/database/client';
 
 export const actions = {
-    quejas: async ({ request }: RequestEvent) => {
-        // Extraer los datos del formulario
-        const peticion = Object.fromEntries(await request.formData());
-        
-        // Convertir la fecha a texto para que coincida con el esquema
-        const fechaTexto = new Date().toISOString();
+    agregarQueja: async ({ request }) => {
+        const data = Object.fromEntries(await request.formData());
 
-        // Inserción en la base de datos
-        await db.insert(quejas).values({
-            idEstudiante: Number(peticion.id), 
-            fecha: fechaTexto, 
-            alimento: peticion.alimento,
-            tipoQueja: peticion.tipo,
-            problema: peticion.problema,
-        });
+        const nuevaQueja = {
+            idEstudiante: Number(data.idEstudiante), // Asegúrate de convertir a número si es necesario
+            fecha: String(data.fecha),
+            alimento: String(data.alimento),
+            tipoQueja: String(data.tipoQueja),
+            problema: String(data.problema),
+        };
 
-        return { success: true };
+        try {
+            await db.insert(quejas).values(nuevaQueja);
+        } catch (error) {
+            console.error("Error al insertar la queja:", error);
+        }
     }
 };
