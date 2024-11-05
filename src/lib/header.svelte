@@ -1,3 +1,9 @@
+// svelte-ignore script_context_deprecated
+<script>
+	import { page } from '$app/stores';
+</script>
+
+
 <header class="encabezado">
 
 	<div class="contenedor_menu">
@@ -31,7 +37,7 @@
 		<div class="contenedor-cover">
 			<div class="cover">
 				<div class="text">
-					<h1>Refrigerios Lola</h1>
+					<h1>hola</h1>
 		        </div>
 		    </div>
 	    </div>
