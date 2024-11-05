@@ -42,50 +42,6 @@ import { onDestroy } from 'svelte';
   });
 </script>
 
-<header class="encabezado">
-
-	<div class="contenedor_menu">
-		<div class="logo">
-			<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-		</div>
-
-		<div class="barras">
-			
-			<div id="back_menu"></div>
-			<nav>
-				<img src="https://res.cloudinary.com/dapvpqxhz/image/upload/v1724702751/miproyecto/boc1vxlyzijxtnr2foel.png"
-				alt="logo">
-				<ul class="menu-horizontal">
-					<li><a href="/">Vuelve al Inicio</a></li>
-					<li><a href="/">inscripción</a>
-					<ul class="menu-vertical">
-						<li><a href="https://forms.gle/qYtmYsHZeRb7onz68">Formulario</a></li>
-					</ul>
-				    </li>
-				    <li><a href="/inicio_sesion">Inicia sesión</a></li>
-				    <li><a href="/quejas">Quejas</a></li>
-			    </ul>
-			</nav>
-		</div>
-	</div>
-
-	<br />
-	<br />
-	<main>
-		<div class="contenedor-cover">
-			<div class="cover">
-				<div class="text">
-					<h1>complemento</h1>
-		        </div>
-		    </div>
-	    </div>
-    </main>
-</header>
-=======
-=======
-
->>>>>>> 7494c7f75bf66a7a99cb5720bb04b0f4d01d9b78
 
 <section class="pregunta">
 <h1>
@@ -153,15 +109,6 @@ import { onDestroy } from 'svelte';
 	position: relative;
 	max-width: 48rem;
 	margin: 0 auto;
-}
-
-.slider{
-	display: flex;
-	aspect-ratio: 16/9;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
 }
 
 .pregunta h1{

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 <script> 	
-=======
-<script> 
 import { onDestroy } from 'svelte';	
->>>>>>> 48f531353f885fa3e3837a9ed348b363f39e9bce
 	
 	let ver = false;
 	let currentIndex = 0;
@@ -40,19 +36,6 @@ import { onDestroy } from 'svelte';
     clearInterval(interval);
   });
 </script>
-<header class="encabezado">
-	<br />
-	<br />
-	<main>
-		<div class="contenedor-cover">
-			<div class="cover">
-				<div class="text">
-					<h1>vaso de leche</h1>
-		        </div>
-		    </div>
-	    </div>
-    </main>
-</header>
 
 
 
@@ -114,157 +97,6 @@ import { onDestroy } from 'svelte';
 		list-style: none;
 	}
 
-	.encabezado {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
-		min-height: 55vh;
-		background-position: center center ;
-		background-repeat: no-repeat;
-		background-size: cover;
-		align-items: center;
-		padding: 40px;
-		z-index: 1;
-		}
-
-	.contenedor_menu{ 
-		max-width: 1200px;
-		height: 100%;
-		margin: auto;
-		display: flex;
-		justify-content: space-between;
-	}
-	.logo{
-		height:100px;
-		display: flex;
-		align-items: center;
-	}
-	.logo img {
-		width: 95px;
-		border-radius: 60%;
-		position: relative;
-		font-size: 25px;
-	}
-
-	.barras {
-		display: flex;
-		align-items: center;
-	}
-
-	.barras .menu-horizontal {
-		display: flex;
-		justify-content: space-between;
-	}
-	.barras .menu-horizontal li{
-		margin-left: 36px;
-	}
-
-	.barras .menu-horizontal li a {
-		font-size: 16px;
-		color: white;
-		margin-left: 36px;
-		display: block;
-		text-transform: uppercase;
-	}
-
-	.encabezado li:hover {
-		background: rgb(0, 41, 80); 
-	}
-
-	.barras .menu-horizontal .menu-vertical {
-		position: absolute;
-		display: none;
-		width: 200px;
-		background-color: rgb(107, 107, 104);
-	}
-
-	.encabezado .menu-horizontal li:hover .menu-vertical {
-		display: block;
-	}
-
-	.abrir-menu, .cerrar-menu{
-		display: none;
-		border: 0;
-		background: 0;
-		color: rgb(255, 255, 255);
-	}
-
-	@media screen and (max-width:900px){
-		.abrir-menu, .cerrar-menu{
-			display: block;
-			cursor: pointer;
-		}
-		.nav{
-			display: none;
-		}
-		.nav{
-			opacity: 0;
-			visibility: hidden;
-			display: flex;
-			flex-direction: column;
-			align-items: end;
-			gap: 1rem;
-			position: absolute;
-			flex-direction: column;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			align-items: end;
-			background-color: rgb(27, 27, 27);
-			padding: 2rem;
-			z-index: 1;
-			box-shadow: 0 0 0 1000vmax rgba(0, 0, 0, 0.5);
-		}
-
-		.menu-horizontal{
-			flex-direction: column;
-			align-items: end;
-		}
-
-		.nav.visible{
-			opacity: 1;
-			visibility: visible;
-			display: block;
-		}
-		 
-	    .menu-horizontal li a {
-			color: black;
-			margin-top: 25px;
-			
-		}
-		.menu-horizontal {
-			
-		}
-	}
-	
-    .contenedor-cover{
-		width: 100%;
-		height: 800%;
-		padding: 40px;
-	}
-
-	.cover{
-		max-width: 1200px;
-		height: 100%;
-		margin: auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-
-	}
-	.cover .text h1 {
-		font-size: 34px;
-		color:white;
-		width: 60%;
-		text-transform: uppercase;
-	}
-
-	@media screen and (max-width:1200px){
-
-		.encabezado{
-			padding:40px;
-		}
-	}
-
 
 	.pregunta h1{
 		padding: 20px;
@@ -278,22 +110,12 @@ import { onDestroy } from 'svelte';
 
 }
 
-<<<<<<< HEAD
 .slider-wrapper{
 	position: relative;
 	max-width: 48rem;
 	margin: 0 auto;
 }
 
-.slider{
-	display: flex;
-	aspect-ratio: 16/9;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
-}
-=======
 .slider-wrapper {
     position: relative;
     max-width: 48rem;
@@ -325,5 +147,4 @@ import { onDestroy } from 'svelte';
   .next {
     right: -30px;
   }
->>>>>>> 48f531353f885fa3e3837a9ed348b363f39e9bce
 </style>

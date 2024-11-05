@@ -55,32 +55,7 @@
 </header>
 
 <style>
-    .encabezado {
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-			url(https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg);
-		min-height: 55vh;
-		background-position: center center ;
-		background-repeat: no-repeat;
-		background-size: cover;
-		align-items: center;
-		padding: 40px;
-		z-index: 1;
-		}
-    
-        @media screen and (max-width:1200px){
-        .encabezado{
-            padding:40px;
-        }
-    }
 
-
-	.contenedor_menu{ 
-		max-width: 1200px;
-		height: 100%;
-		margin: auto;
-		display: flex;
-		justify-content: space-between;
-	}
 	.hero {
 	  background-image: url('https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg');
 	  background-size: cover;
