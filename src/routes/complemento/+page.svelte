@@ -111,15 +111,6 @@ import { onDestroy } from 'svelte';
 	margin: 0 auto;
 }
 
-.slider{
-	display: flex;
-	aspect-ratio: 16/9;
-	overflow: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
-}
-
 .pregunta h1{
 	padding: 20px;
 	text-align: center;
