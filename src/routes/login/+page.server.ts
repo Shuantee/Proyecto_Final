@@ -4,7 +4,22 @@ import { estudiantes } from '$lib/server/database/schema.js';
 import { eq } from 'drizzle-orm';
 
 
-export const load = async () => {};
+export const load = async () => { };
+async function obtenerEstudiantes() {
+	try {
+	  const resultado = await db.select().from(estudiantes);
+	  
+	  console.log("Lista de Estudiantes:", resultado);
+	  
+
+	} catch (error) {
+	  console.error("Error al obtener estudiantes:", error);
+	}
+  }
+  
+obtenerEstudiantes();
+
+
 export const actions = {
 	handleLogin: async ({ request }: { request: Request; }) => {
 		const data = Object.fromEntries(await request.formData());

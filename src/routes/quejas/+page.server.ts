@@ -1,9 +1,10 @@
-import { quejas } from '$lib/server/database/schema';
+import { estudiantes, quejas } from '$lib/server/database/schema';
 import { db } from '$lib/server/database/client';
 
 export const actions = {
     agregarQueja: async ({ request }) => {
         const data = Object.fromEntries(await request.formData());
+
 
         const nuevaQueja = {
             idEstudiante: Number(data.idEstudiante), // Asegúrate de convertir a número si es necesario
