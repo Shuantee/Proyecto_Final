@@ -15,7 +15,11 @@
 		</select>
 		
     <label for="alimento">Tipo de Alimento:</label>
-    <select id="alimento" name="alimento" required></select>
+    <select id="alimento" name="alimento" required>
+      <option value="">Selecciona el tipo de aliemnto</option>
+      <option value="vaso de leche">Vaso de leche</option>
+      <option value="complemento">Complemento</option>
+    </select>
 		
 		<label for="detalle-solicitud">Escribe tu solicitud aqui:</label>
 		<textarea id="detalle-solicitud" name="problema" rows="6" placeholder="Describe tu solicitud" required></textarea>
