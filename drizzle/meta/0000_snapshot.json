@@ -1,30 +1,58 @@
 {
-  "id": "00000000-0000-0000-0000-000000000000",
-  "prevId": "",
   "version": "6",
   "dialect": "sqlite",
+  "id": "55e4635a-d31c-445b-8d5a-80ecbb731449",
+  "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "grupo": {
-      "name": "grupo",
+    "Estudiantes": {
+      "name": "Estudiantes",
       "columns": {
-        "id": {
-          "autoincrement": false,
-          "name": "id",
+        "id_estudiante": {
+          "name": "id_estudiante",
           "type": "integer",
           "primaryKey": true,
-          "notNull": false
+          "notNull": true,
+          "autoincrement": true
         },
-        "nom_grup": {
-          "autoincrement": false,
-          "name": "nom_grup",
-          "type": "text",
+        "nombre": {
+          "name": "nombre",
+          "type": "text(100)",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true,
+          "autoincrement": false
+        },
+        "grupo": {
+          "name": "grupo",
+          "type": "text(10)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "grado": {
+          "name": "grado",
+          "type": "text(10)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "pin": {
+          "name": "pin",
+          "type": "text(10)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "correo": {
+          "name": "correo",
+          "type": "text(100)",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
         }
       },
-      "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {},
+      "compositePrimaryKeys": {},
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
@@ -32,21 +60,20 @@
       "name": "grado",
       "columns": {
         "id": {
-          "autoincrement": false,
           "name": "id",
           "type": "integer",
           "primaryKey": true,
-          "notNull": false
+          "notNull": true,
+          "autoincrement": false
         },
         "id_grupo": {
-          "autoincrement": false,
           "name": "id_grupo",
           "type": "integer",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true,
+          "autoincrement": false
         }
       },
-      "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {
         "grado_id_grupo_grupo_id_fk": {
@@ -63,6 +90,31 @@
           "onUpdate": "no action"
         }
       },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "grupo": {
+      "name": "grupo",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "nom_grup": {
+          "name": "nom_grup",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
@@ -70,49 +122,48 @@
       "name": "Quejas",
       "columns": {
         "id_queja": {
-          "autoincrement": true,
           "name": "id_queja",
           "type": "integer",
           "primaryKey": true,
-          "notNull": false
+          "notNull": true,
+          "autoincrement": true
         },
         "id_estudiante": {
-          "autoincrement": false,
           "name": "id_estudiante",
           "type": "integer",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "fecha": {
-          "autoincrement": false,
           "name": "fecha",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "alimento": {
-          "autoincrement": false,
           "name": "alimento",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "tipo_queja": {
-          "autoincrement": false,
           "name": "tipo_queja",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         },
         "problema": {
-          "autoincrement": false,
           "name": "problema",
           "type": "text",
           "primaryKey": false,
-          "notNull": true
+          "notNull": true,
+          "autoincrement": false
         }
       },
-      "compositePrimaryKeys": {},
       "indexes": {},
       "foreignKeys": {
         "Quejas_id_estudiante_Estudiantes_id_estudiante_fk": {
@@ -129,58 +180,7 @@
           "onUpdate": "no action"
         }
       },
-      "uniqueConstraints": {},
-      "checkConstraints": {}
-    },
-    "Estudiantes": {
-      "name": "Estudiantes",
-      "columns": {
-        "id_estudiante": {
-          "autoincrement": true,
-          "name": "id_estudiante",
-          "type": "integer",
-          "primaryKey": true,
-          "notNull": false
-        },
-        "nombre": {
-          "autoincrement": false,
-          "name": "nombre",
-          "type": "text(100)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "grupo": {
-          "autoincrement": false,
-          "name": "grupo",
-          "type": "text(10)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "grado": {
-          "autoincrement": false,
-          "name": "grado",
-          "type": "text(10)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "pin": {
-          "autoincrement": false,
-          "name": "pin",
-          "type": "text(10)",
-          "primaryKey": false,
-          "notNull": true
-        },
-        "correo": {
-          "autoincrement": false,
-          "name": "correo",
-          "type": "text(100)",
-          "primaryKey": false,
-          "notNull": true
-        }
-      },
       "compositePrimaryKeys": {},
-      "indexes": {},
-      "foreignKeys": {},
       "uniqueConstraints": {},
       "checkConstraints": {}
     }
@@ -191,5 +191,8 @@
     "schemas": {},
     "tables": {},
     "columns": {}
+  },
+  "internal": {
+    "indexes": {}
   }
 }
