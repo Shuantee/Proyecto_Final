@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 <script> 	
-=======
-<script> 
 import { onDestroy } from 'svelte';	
->>>>>>> 48f531353f885fa3e3837a9ed348b363f39e9bce
 	
 	let ver = false;
 	let currentIndex = 0;
@@ -40,19 +36,6 @@ import { onDestroy } from 'svelte';
     clearInterval(interval);
   });
 </script>
-<header class="encabezado">
-	<br />
-	<br />
-	<main>
-		<div class="contenedor-cover">
-			<div class="cover">
-				<div class="text">
-					<h1>vaso de leche</h1>
-		        </div>
-		    </div>
-	    </div>
-    </main>
-</header>
 
 
 
@@ -278,7 +261,6 @@ import { onDestroy } from 'svelte';
 
 }
 
-<<<<<<< HEAD
 .slider-wrapper{
 	position: relative;
 	max-width: 48rem;
@@ -293,7 +275,6 @@ import { onDestroy } from 'svelte';
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem ssla (0%,0%,0%,0.25);
 }
-=======
 .slider-wrapper {
     position: relative;
     max-width: 48rem;
@@ -325,5 +306,4 @@ import { onDestroy } from 'svelte';
   .next {
     right: -30px;
   }
->>>>>>> 48f531353f885fa3e3837a9ed348b363f39e9bce
 </style>
