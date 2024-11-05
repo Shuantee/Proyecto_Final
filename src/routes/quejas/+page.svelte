@@ -14,6 +14,8 @@
 		  <option value="sugerencia">Sugerencia</option>
 		</select>
 		
+    <label for="alimento">Tipo de Alimento:</label>
+    <select id="alimento" name="alimento" required></select>
 		
 		<label for="detalle-solicitud">Escribe tu solicitud aqui:</label>
 		<textarea id="detalle-solicitud" name="problema" rows="6" placeholder="Describe tu solicitud" required></textarea>
