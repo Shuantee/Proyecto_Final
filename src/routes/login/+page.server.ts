@@ -1,10 +1,8 @@
-<<<<<<< HEAD
  
-=======
 import type { Cookies } from '@sveltejs/kit';
 import { fail, redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/database/client';
-import { estudiante } from '$lib/server/database/tables';
+//import { estudiante } from '$lib/server/database/tables';
 import { eq } from 'drizzle-orm';
 
 export const load = async () => {};
@@ -54,4 +52,3 @@ export const actions = {
 		throw redirect(302, '/');
 	}
 };
->>>>>>> 48f531353f885fa3e3837a9ed348b363f39e9bce

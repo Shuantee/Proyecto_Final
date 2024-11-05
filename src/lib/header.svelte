@@ -40,7 +40,6 @@
 		</div>
 	  </nav>
 	</div>
-<<<<<<< HEAD
 
 	<br />
 	<br />
@@ -81,15 +80,11 @@
 		margin: auto;
 		display: flex;
 		justify-content: space-between;
-=======
-  </header>
-  
-  <style>
+	}
 	.hero {
 	  background-image: url('https://res.cloudinary.com/dapvpqxhz/image/upload/v1724703252/miproyecto/ecswdprmp2m68dgjvzsx.jpg');
 	  background-size: cover;
 	  background-position: center;
->>>>>>> 48f531353f885fa3e3837a9ed348b363f39e9bce
 	}
   
 	.navbar {
