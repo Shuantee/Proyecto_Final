@@ -1,31 +1,31 @@
-import { sqliteTable, integer, text, foreignKey } from "drizzle-orm/sqlite-core"
-
+import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
 
 export const grupo = sqliteTable("grupo", {
-	id: integer().primaryKey(),
-	nomGrup: text("nom_grup"),
+  id: integer("id").primaryKey(),
+  nomGrup: text("nom_grup").notNull(),
 });
 
 export const grado = sqliteTable("grado", {
-	id: integer().primaryKey(),
-	idGrupo: integer("id_grupo").references(() => grupo.id),
-});
-
-export const quejas = sqliteTable("Quejas", {
-	idQueja: integer("id_queja").primaryKey({ autoIncrement: true }),
-	idEstudiante: integer("id_estudiante").notNull().references(() => estudiantes.idEstudiante),
-	fecha: text().notNull(),
-	alimento: text().notNull(),
-	tipoQueja: text("tipo_queja").notNull(),
-	problema: text().notNull(),
+  id: integer("id").primaryKey(),
+  idGrupo: integer("id_grupo").references(() => grupo.id).notNull(),
 });
 
 export const estudiantes = sqliteTable("Estudiantes", {
-	idEstudiante: integer("id_estudiante").primaryKey({ autoIncrement: true }),
-	nombre: text({ length: 100 }).notNull(),
-	grupo: text({ length: 10 }).notNull(),
-	grado: text({ length: 10 }).notNull(),
-	pin: text({ length: 10 }).notNull(),
-	correo: text({ length: 100 }).notNull(),
+  idEstudiante: integer("id_estudiante").primaryKey({ autoIncrement: true }),
+  nombre: text("nombre", { length: 100 }).notNull(),
+  grupo: text("grupo", { length: 10 }).notNull(),
+  grado: text("grado", { length: 10 }).notNull(),
+  pin: text("pin", { length: 10 }).notNull(),
+  correo: text("correo", { length: 100 }).notNull(),
 });
 
+export const quejas = sqliteTable("Quejas", {
+  idQueja: integer("id_queja").primaryKey({ autoIncrement: true }),
+  idEstudiante: integer("id_estudiante")
+    .references(() => estudiantes.idEstudiante)
+    .notNull(),
+  fecha: text("fecha").notNull(),
+  alimento: text("alimento").notNull(),
+  tipoQueja: text("tipo_queja").notNull(),
+  problema: text("problema").notNull(),
+});
