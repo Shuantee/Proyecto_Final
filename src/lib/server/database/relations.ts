@@ -1,15 +1,29 @@
 import { relations } from "drizzle-orm/relations";
-import { grupo, grado, estudiantes, quejas } from "./schema";
+import { grado, estudiantes, grupo, quejas } from "./schema";
 
-export const gradoRelations = relations(grado, ({one}) => ({
+export const estudiantesRelations = relations(estudiantes, ({one, many}) => ({
+	grado: one(grado, {
+		fields: [estudiantes.grado],
+		references: [grado.id]
+	}),
 	grupo: one(grupo, {
-		fields: [grado.idGrupo],
+		fields: [estudiantes.grupo],
 		references: [grupo.id]
 	}),
+	quejas: many(quejas),
 }));
 
-export const grupoRelations = relations(grupo, ({many}) => ({
-	grados: many(grado),
+export const gradoRelations = relations(grado, ({many}) => ({
+	estudiantes: many(estudiantes),
+	grupos: many(grupo),
+}));
+
+export const grupoRelations = relations(grupo, ({one, many}) => ({
+	estudiantes: many(estudiantes),
+	grado: one(grado, {
+		fields: [grupo.gradoId],
+		references: [grado.id]
+	}),
 }));
 
 export const quejasRelations = relations(quejas, ({one}) => ({
@@ -17,8 +31,4 @@ export const quejasRelations = relations(quejas, ({one}) => ({
 		fields: [quejas.idEstudiante],
 		references: [estudiantes.idEstudiante]
 	}),
-}));
-
-export const estudiantesRelations = relations(estudiantes, ({many}) => ({
-	quejas: many(quejas),
 }));

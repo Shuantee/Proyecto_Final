@@ -21,7 +21,11 @@
 		"@types/node": "^22.9.0",
 		"@types/pug": "^2.0.10",
 		"@types/ws": "^8.5.13",
+<<<<<<< HEAD
 		"drizzle-kit": "^0.26.2",
+=======
+		"drizzle-kit": "^0.27.1",
+>>>>>>> 30f665cff54d299672577c41e80e581c1cdbaa46
 		"drizzle-orm": "^0.36.0",
 		"eslint": "^9.0.0",
 		"eslint-config-prettier": "^9.1.0",
