@@ -47,7 +47,6 @@
 		<div class="contenedor-cover">
 			<div class="cover">
 				<div class="text">
-					<h1>hola</h1>
 		        </div>
 		    </div>
 	    </div>
