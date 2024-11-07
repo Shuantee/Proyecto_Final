@@ -4,11 +4,7 @@ import { defineConfig } from 'drizzle-kit';
 config({ path: '.env' });
 
 export default defineConfig({
-  schema: './src/lib/server/database/data.ts',
+  schema: './src/lib/server/database/schema.ts', // Actualizado path correcto
   out: './drizzle',
-  dialect: 'turso',
-  dbCredentials: {
-    url: process.env.TURSO_CONNECTION_URL!,
-    authToken: process.env.TURSO_AUTH_TOKEN!,
-  },
+  dialect: 'sqlite', // Cambiado a sqlite según la configuración actual
 });

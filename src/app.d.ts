@@ -1,16 +1,12 @@
+import type { UserSession } from '$lib/server/auth';
+
 declare global {
     namespace App {
         interface Locals {
-            user: {
-                id: number;
-                nombre: string;
-            } | null;
+            user: UserSession | null;
         }
         interface PageData {
-            user?: {
-                id: number;
-                nombre: string;
-            } | null;
+            user?: UserSession | null;
         }
     }
 }
