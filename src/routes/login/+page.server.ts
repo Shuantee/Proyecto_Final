@@ -1,16 +1,8 @@
 import { fail, redirect } from '@sveltejs/kit';
-import { db } from '$lib/server/database/client';
+import { db } from '$lib/server/database/client.js';
 import { estudiantes } from '$lib/server/database/schema.js';
 import { eq } from 'drizzle-orm';
 import { createSession } from '$lib/server/database/auth.js';
-
-export const load = async ({ locals }) => {
-    // Redirigir si ya está autenticado
-    if (locals.user) {
-        throw redirect(302, '/');
-    }
-    return {};
-};
 
 export const actions = {
     handleLogin: async ({ request, cookies }) => {
@@ -26,8 +18,7 @@ export const actions = {
             const user = await db.select({
                 idEstudiante: estudiantes.idEstudiante,
                 nombre: estudiantes.nombre,
-                pin: estudiantes.pin,
-                correo: estudiantes.correo
+                pin: estudiantes.pin
             })
             .from(estudiantes)
             .where(eq(estudiantes.correo, email))
@@ -47,7 +38,7 @@ export const actions = {
                 nombre: user[0].nombre
             });
 
-            return { success: true };
+            throw redirect(302, '/');
         } catch (error) {
             console.error('Error en el login:', error);
             return fail(500, { error: 'Error interno del servidor' });
