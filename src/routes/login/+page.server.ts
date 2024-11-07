@@ -2,55 +2,46 @@ import { fail, redirect } from '@sveltejs/kit';
 import { db } from '$lib/server/database/client';
 import { estudiantes } from '$lib/server/database/schema.js';
 import { eq } from 'drizzle-orm';
-
-
-export const load = async () => { };
-async function obtenerEstudiantes() {
-	try {
-	  const resultado = await db.select().from(estudiantes);
-	  
-	  console.log("Lista de Estudiantes:", resultado);
-	  
-
-	} catch (error) {
-	  console.error("Error al obtener estudiantes:", error);
-	}
-  }
-  
-obtenerEstudiantes();
-
+import { createSession } from '$lib/server/database/auth.js';
 
 export const actions = {
-	handleLogin: async ({ request }: { request: Request; }) => {
-		const data = Object.fromEntries(await request.formData());
-		const pin = String(data.pin);
+    handleLogin: async ({ request, cookies }) => {
+        const data = await request.formData();
+        const email = data.get('email');
+        const pin = data.get('pin');
 
-		// Verificar que todos los campos estén presentes
-		if (
-			typeof data.email !== 'string' ||
-			typeof data.pin !== 'string' ||
-            typeof data.name !== 'string' ||
-			!data.email ||
-			!data.pin ||
-            !data.name 
-		) {
-			return fail(400, { invalid: true });
-		}
+        if (!email || !pin || typeof email !== 'string' || typeof pin !== 'string') {
+            return fail(400, { error: 'Email y PIN son requeridos' });
+        }
 
-		// Buscar estudiante en la base de datos
-		const user = await db.select().from(estudiantes).where(eq(estudiantes.correo, data.email,));
+        try {
+            const user = await db.select({
+                idEstudiante: estudiantes.idEstudiante,
+                nombre: estudiantes.nombre,
+                pin: estudiantes.pin
+            })
+            .from(estudiantes)
+            .where(eq(estudiantes.correo, email))
+            .limit(1);
 
-		if (!user || user.length === 0 || user[0].pin !== pin) {
-			return fail(400, { credentials: true });
-		}
+            if (user.length === 0) {
+                return fail(400, { error: 'Usuario no encontrado' });
+            }
 
-		if (user.length > 1) {
-			return fail(400, { duplicate: true });
-		}
+            if (user[0].pin !== pin) {
+                return fail(400, { error: 'PIN incorrecto' });
+            }
 
+            // Crear sesión
+            createSession(cookies, {
+                id: user[0].idEstudiante,
+                nombre: user[0].nombre
+            });
 
-		// Redireccionar al usuario
-		throw redirect(302, '/');
-	}
+            throw redirect(302, '/');
+        } catch (error) {
+            console.error('Error en el login:', error);
+            return fail(500, { error: 'Error interno del servidor' });
+        }
+    }
 };
-

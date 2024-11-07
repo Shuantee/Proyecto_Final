@@ -1,35 +1,30 @@
-import { sqliteTable, foreignKey, integer, text } from "drizzle-orm/sqlite-core"
-import { sql } from "drizzle-orm"
+import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
 
-export const estudiantes = sqliteTable("estudiantes", {
-	idEstudiante: integer("id_estudiante").primaryKey({ autoIncrement: true }),
-	nombre: text().notNull(),
-	grupo: integer().references(() => grupo.id),
-	grado: integer().references(() => grado.id),
-	pin: text().notNull(),
-	correo: text().notNull(),
+export const estudiantes = sqliteTable("Estudiantes", {
+    idEstudiante: integer("id_estudiante").primaryKey({ autoIncrement: true }),
+    nombre: text("nombre").notNull(),
+    grupo: integer("grupo").references(() => grupo.id),
+    grado: integer("grado").references(() => grado.id),
+    pin: text("pin").notNull(),
+    correo: text("correo").notNull(),
 });
 
-export const quejas = sqliteTable("quejas", {
-	idQueja: integer("id_queja").primaryKey({ autoIncrement: true }),
-	idEstudiante: integer("id_estudiante").notNull().references(() => estudiantes.idEstudiante),
-	fecha: text().notNull(),
-	alimento: text().notNull(),
-	tipoQueja: text("tipo_queja").notNull(),
-	problema: text().notNull(),
+export const quejas = sqliteTable("Quejas", {
+    idQueja: integer("id_queja").primaryKey({ autoIncrement: true }),
+    idEstudiante: integer("id_estudiante").notNull().references(() => estudiantes.idEstudiante),
+    fecha: text("fecha").notNull(),
+    alimento: text("alimento").notNull(),
+    tipoQueja: text("tipo_queja").notNull(),
+    problema: text("problema").notNull(),
 });
 
 export const grupo = sqliteTable("grupo", {
-	id: integer().primaryKey({ autoIncrement: true }),
-	gradoId: integer("grado_id").notNull().references(() => grado.id),
-	nombre: text().notNull(),
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    gradoId: integer("grado_id").notNull().references(() => grado.id),
+    nombre: text("nombre").notNull(),
 });
 
 export const grado = sqliteTable("grado", {
-	id: integer().primaryKey({ autoIncrement: true }),
-	nombre: text().notNull(),
+    id: integer("id").primaryKey({ autoIncrement: true }),
+    nombre: text("nombre").notNull(),
 });
-
-export const drizzleMigrations = sqliteTable("__drizzle_migrations", {
-});
-

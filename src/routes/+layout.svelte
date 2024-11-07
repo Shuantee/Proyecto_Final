@@ -1,21 +1,16 @@
-<script>
-    import Header from '$lib/header.svelte';
-    import Footer from '$lib/footer.svelte';
-  </script>
+<script lang="ts">
+  import { page } from '$app/stores';
+</script>
 
-<Header />
+<nav>
+  {#if $page.data.user}
+      <span>Bienvenido, {$page.data.user.nombre}</span>
+      <form action="/logout" method="POST">
+          <button type="submit">Cerrar sesión</button>
+      </form>
+  {:else}
+      <a href="/login">Iniciar sesión</a>
+  {/if}
+</nav>
 
-<!-- Aquí es donde el contenido de cada página irá -->
-<main>
-  <slot></slot> <!-- Esto representa el contenido de cada página individual -->
-</main>
-
-<Footer />
-
-<style>
-    main {
-      padding: 2rem;
-      min-height: calc(100vh - 4rem); /* Ajuste para evitar que el footer se superponga */
-      padding-bottom: 4rem; /* Espacio para el footer */
-    }
-  </style>
+<slot />
