@@ -1,8 +1,8 @@
-/*import { db } from "$lib/server/database/client";
- import { pae } from "$lib/server/database/schema";
+import { db } from "$lib/server/database/client";
+ import { estudiantes } from "$lib/server/database/schema";
 
 export const load= async()=>{
-    let miPae = await db.select().from(pae) 
-    console.log(miPae)
-    return {miPae}
-}*/
+    let Tabla = await db.select().from(estudiantes) 
+    console.log(estudiantes)
+    return {estudiantes}
+}
