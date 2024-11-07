@@ -34,65 +34,63 @@
 </script>
 
 <section class="section">
-  <form action="?/login" method="POST">
-    <div class="login-container">
-      <h1 class="title has-text-centered">Iniciar Sesión</h1>
-  
-      <div class="box">
-        {#if errorMessage}
-          <article class="message is-danger">
-            <div class="message-body">{errorMessage}</div>
-          </article>
-        {/if}
-  
-        <!-- Campo Nombre -->
-        <div class="field">
-          <label class="label"> Nombre</label>
-          <div class="control">
-            <input
-              class="input"
-              type="text"
-              placeholder="Ingresa tu nombre"
-              bind:value={name}
-            />
-          </div>
+  <div class="login-container">
+    <h1 class="title has-text-centered">Iniciar Sesión</h1>
+
+    <div class="box">
+      {#if errorMessage}
+        <article class="message is-danger">
+          <div class="message-body">{errorMessage}</div>
+        </article>
+      {/if}
+
+      <!-- Campo Nombre -->
+      <div class="field">
+        <label class="label"> Nombre</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Ingresa tu nombre"
+            bind:value={name}
+          />
         </div>
-  
-        <!-- Campo Correo -->
-        <div class="field">
-          <label class="label">Correo</label>
-          <div class="control">
-            <input
-              class="input"
-              type="email"
-              placeholder="Ingresa tu correo"
-              bind:value={email}
-            />
-          </div>
+      </div>
+
+      <!-- Campo Correo -->
+      <div class="field">
+        <label class="label">Correo</label>
+        <div class="control">
+          <input
+            class="input"
+            type="email"
+            placeholder="Ingresa tu correo"
+            bind:value={email}
+          />
         </div>
-  
-        <!-- Campo PIN -->
-        <div class="field">
-          <label class="label">PIN</label>
-          <div class="control">
-            <input
-              class="input"
-              type="password"
-              placeholder="Ingresa tu PIN"
-              bind:value={pin}
-            />
-          </div>
+      </div>
+
+      <!-- Campo PIN -->
+      <div class="field">
+        <label class="label">PIN</label>
+        <div class="control">
+          <input
+            class="input"
+            type="password"
+            placeholder="Ingresa tu PIN"
+            bind:value={pin}
+          />
         </div>
-  
-        <!-- Botón de Iniciar Sesión en Verde -->
-        <div class="field">
-          <div class="control">
-            <button class="button is-success is-fullwidth" type="submit">
-              Iniciar Sesión
-            </button>
-          </div>
+      </div>
+
+      <!-- Botón de Iniciar Sesión en Verde -->
+      <div class="field">
+        <div class="control">
+          <button class="button is-success is-fullwidth" on:click={handleLogin}>
+            Iniciar Sesión
+          </button>
         </div>
       </div>
     </div>
-  </form>
+  </div>
 </section>
