@@ -4,6 +4,14 @@ import { estudiantes } from '$lib/server/database/schema.js';
 import { eq } from 'drizzle-orm';
 import { createSession } from '$lib/server/database/auth.js';
 
+export const load = async ({ locals }) => {
+    // Redirigir si ya está autenticado
+    if (locals.user) {
+        throw redirect(302, '/');
+    }
+    return {};
+};
+
 export const actions = {
     handleLogin: async ({ request, cookies }) => {
         const data = await request.formData();
@@ -18,7 +26,8 @@ export const actions = {
             const user = await db.select({
                 idEstudiante: estudiantes.idEstudiante,
                 nombre: estudiantes.nombre,
-                pin: estudiantes.pin
+                pin: estudiantes.pin,
+                correo: estudiantes.correo
             })
             .from(estudiantes)
             .where(eq(estudiantes.correo, email))
@@ -38,7 +47,7 @@ export const actions = {
                 nombre: user[0].nombre
             });
 
-            throw redirect(302, '/');
+            return { success: true };
         } catch (error) {
             console.error('Error en el login:', error);
             return fail(500, { error: 'Error interno del servidor' });

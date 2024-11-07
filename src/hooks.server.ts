@@ -2,16 +2,15 @@ import { getSession } from '$lib/server/database/auth';
 import type { Handle } from '@sveltejs/kit';
 
 export const handle: Handle = async ({ event, resolve }) => {
-    event.locals.user = getSession(event.cookies);
+    // Obtener la sesión del usuario
+    const session = getSession(event.cookies);
+    event.locals.user = session;
 
-    // Proteger rutas que requieren autenticación
-    const protectedRoutes = ['/quejas'];
-    if (protectedRoutes.some(route => event.url.pathname.startsWith(route)) && !event.locals.user) {
-        return new Response('Redirect', {
-            status: 303,
-            headers: { Location: '/login' }
-        });
-    }
-
-    return await resolve(event);
+    // Agregar los datos del usuario a la data de la página
+    return resolve(event, {
+        transformPageChunk: ({ html }) => html.replace(
+            '%user%',
+            session ? JSON.stringify(session) : 'null'
+        )
+    });
 };

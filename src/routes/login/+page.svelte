@@ -1,96 +1,93 @@
-<script>
-  import { onMount } from 'svelte';
+<script lang="ts">
+  import { enhance } from '$app/forms';
+  import { goto } from '$app/navigation';
+  import type { ActionResult } from '@sveltejs/kit';
 
-  let name = '';
-  let email = '';
-  let pin = '';
-  let errorMessage = '';
+  let error: string | null = null;
 
-  // Función para manejar el login
-  async function handleLogin() {
-    if (!name || !email || !pin) {
-      errorMessage = 'Todos los campos son obligatorios!';
-    } else {
-      errorMessage = '';
-      console.log('Iniciando sesión con:', { name, email, pin });
-
-      // En teoria aquí es la función pa llamar al API
-      const response = await fetch('/page.server.ts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ name, email, pin }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log('Inicio de sesión exitoso:', data);
-      } else {
-        errorMessage = 'Credenciales incorrectas';
-      }
-    }
-  }
+  const handleSubmit = () => {
+      return async ({ result }: { result: ActionResult }) => {
+          if (result.type === 'failure') {
+              error = result.data?.error as string;
+          } else if (result.type === 'redirect') {
+              goto(result.location);
+          }
+      };
+  };
 </script>
 
-<section class="section">
-  <div class="login-container">
-    <h1 class="title has-text-centered">Iniciar Sesión</h1>
+<div class="container">
+  <div class="login-form">
+      <h1 class="title">Iniciar Sesión</h1>
 
-    <div class="box">
-      {#if errorMessage}
-        <article class="message is-danger">
-          <div class="message-body">{errorMessage}</div>
-        </article>
+      {#if error}
+          <div class="notification is-danger">
+              {error}
+          </div>
       {/if}
 
-      <!-- Campo Nombre -->
-      <div class="field">
-        <label class="label"> Nombre</label>
-        <div class="control">
-          <input
-            class="input"
-            type="text"
-            placeholder="Ingresa tu nombre"
-            bind:value={name}
-          />
-        </div>
-      </div>
+      <form 
+          method="POST" 
+          action="?/handleLogin" 
+          use:enhance={handleSubmit}
+      >
+          <div class="field">
+              <label class="label" for="email">Email:</label>
+              <div class="control">
+                  <input 
+                      class="input" 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required
+                  >
+              </div>
+          </div>
 
-      <!-- Campo Correo -->
-      <div class="field">
-        <label class="label">Correo</label>
-        <div class="control">
-          <input
-            class="input"
-            type="email"
-            placeholder="Ingresa tu correo"
-            bind:value={email}
-          />
-        </div>
-      </div>
+          <div class="field">
+              <label class="label" for="pin">PIN:</label>
+              <div class="control">
+                  <input 
+                      class="input" 
+                      type="password" 
+                      id="pin" 
+                      name="pin" 
+                      required
+                  >
+              </div>
+          </div>
 
-      <!-- Campo PIN -->
-      <div class="field">
-        <label class="label">PIN</label>
-        <div class="control">
-          <input
-            class="input"
-            type="password"
-            placeholder="Ingresa tu PIN"
-            bind:value={pin}
-          />
-        </div>
-      </div>
-
-      <!-- Botón de Iniciar Sesión en Verde -->
-      <div class="field">
-        <div class="control">
-          <button class="button is-success is-fullwidth" on:click={handleLogin}>
-            Iniciar Sesión
-          </button>
-        </div>
-      </div>
-    </div>
+          <div class="field">
+              <div class="control">
+                  <button class="button is-primary" type="submit">
+                      Iniciar Sesión
+                  </button>
+              </div>
+          </div>
+      </form>
   </div>
-</section>
+</div>
+
+<style>
+  .container {
+      max-width: 400px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+  }
+
+  .login-form {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .title {
+      text-align: center;
+      margin-bottom: 2rem;
+  }
+
+  .field {
+      margin-bottom: 1rem;
+  }
+</style>

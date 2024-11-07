@@ -1,27 +1,38 @@
 <script lang="ts">
     import { page } from '$app/stores';
-    import '../layout_stile.css';
 </script>
 
-<div class="encabezado">
-    <div class="contenedor_menu">
-        <nav class="barras">
-            <ul class="menu-horizontal">
-                <li><a href="/">Inicio</a></li>
-                {#if $page.data.user}
-                    <li><a href="/quejas">Quejas</a></li>
-                    <li>
-                        <form action="/logout" method="POST">
-                            <button type="submit">Cerrar sesión</button>
-                        </form>
-                    </li>
-                {:else}
-                    <li><a href="/login">Iniciar sesión</a></li>
-                {/if}
-            </ul>
-        </nav>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <!-- Tu logo aquí -->
+            Mi App
+        </a>
     </div>
-</div>
+
+    <div class="navbar-menu">
+        <div class="navbar-end">
+            {#if $page.data.user}
+                <div class="navbar-item">
+                    Bienvenido, {$page.data.user.nombre}
+                </div>
+                <div class="navbar-item">
+                    <form action="/logout" method="POST">
+                        <button class="button is-light" type="submit">
+                            Cerrar Sesión
+                        </button>
+                    </form>
+                </div>
+            {:else}
+                <div class="navbar-item">
+                    <a class="button is-primary" href="/login">
+                        Iniciar Sesión
+                    </a>
+                </div>
+            {/if}
+        </div>
+    </div>
+</nav>
 
 <main>
     <slot />
