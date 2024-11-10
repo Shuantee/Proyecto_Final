@@ -1,47 +1,60 @@
 import { fail, redirect } from '@sveltejs/kit';
-import { db } from '$lib/server/database/client.js';
 import { estudiantes } from '$lib/server/database/schema.js';
 import { eq } from 'drizzle-orm';
 import { createSession } from '$lib/server/database/auth.js';
+import type { Cookies } from '@sveltejs/kit';
+import { db } from '$lib/server/database/client';
+import { bcrypt } from 
+
+
+export const load = async () => {};
 
 export const actions = {
-    handleLogin: async ({ request, cookies }) => {
-        const data = await request.formData();
-        const email = data.get('email');
-        const pin = data.get('pin');
+	login: async ({ request, cookies }: { request: Request; cookies: Cookies }) => {
+		const data = Object.fromEntries(await request.formData());
+		const pin = String(data.pin);
+        const email = String(data.email);
 
-        if (!email || !pin || typeof email !== 'string' || typeof pin !== 'string') {
-            return fail(400, { error: 'Email y PIN son requeridos' });
-        }
+		if (
+			typeof data.email !== 'string' ||
+			typeof data.pin !== 'string' ||
+			!data.email ||
+			!data.pin
+		) {
+			return fail(400, { invalid: true });
+		}
 
-        try {
-            const user = await db.select({
-                idEstudiante: estudiantes.idEstudiante,
-                nombre: estudiantes.nombre,
-                pin: estudiantes.pin
-            })
-            .from(estudiantes)
-            .where(eq(estudiantes.correo, email))
-            .limit(1);
+		const user = await db.select().from(estudiantes).where(eq(estudiantes.correo, data.email));
 
-            if (user.length === 0) {
-                return fail(400, { error: 'Usuario no encontrado' });
-            }
+		if (!user || user.length === 0 || !user[0].pin) {
+			return fail(400, { credentials: true });
+		}
 
-            if (user[0].pin !== pin) {
-                return fail(400, { error: 'PIN incorrecto' });
-            }
+		if (user.length > 1) {
+			return fail(400, { duplicate: true });
+		}
 
-            // Crear sesión
-            createSession(cookies, {
-                id: user[0].idEstudiante,
-                nombre: user[0].nombre
-            });
 
-            throw redirect(302, '/');
-        } catch (error) {
-            console.error('Error en el login:', error);
-            return fail(500, { error: 'Error interno del servidor' });
-        }
-    }
+		if (pin != user[0].pin) {
+			return fail(400, { credentials: true });
+		}
+
+        const sessionToken = crypto.getRandomValues()
+
+
+		await db
+			.update(estudiantes)
+			.set({ pin: sessionToken })
+			.where(eq(estudiantes.correo, data.email));
+
+		cookies.set('session', sessionToken, {
+			// enviara la cookie en cada request
+			path: '/',
+			// vencimiento en 30 días
+			maxAge: 60 * 60 * 24 * 30
+		});
+
+		// redirect the user
+		redirect(302, '/');
+	}
 };
