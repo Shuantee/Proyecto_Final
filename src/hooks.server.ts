@@ -1,11 +1,15 @@
 import { db } from '$lib/server/database/client'
 import { estudiantes } from '$lib/server/database/schema'
 import { eq } from 'drizzle-orm'
+import { page } from '$app/stores'
 
 
 export const handle = async ({ event, resolve }) => {
 
     const session = event.cookies.get('session')
+    event.locals.user = session;
+    
+
 
     if (!session) {
         // if there is no session load page as normal

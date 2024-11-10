@@ -4,10 +4,18 @@
 	let ver = false;
 
 	import type { ActionData } from './$types';
+	import { Cookie } from 'lucia';
 
 	let { form }: { form: ActionData } = $props();
-	
-  </script>
+
+	if ($page.data.user) {
+			ver = true;
+		} else {
+			ver = false;
+		}
+
+		console.log('Estado de sesión:', ver); 
+	</script>
   
   <section class="section">
 	<div class="container">
@@ -90,7 +98,4 @@
 		</div>
 	  </div>
 	</div>
-	<form method="POST" action="?/logout">
-		<button type="submit">Cerrar sesión</button>
-	</form>
   </section>

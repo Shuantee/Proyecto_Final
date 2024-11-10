@@ -1,8 +1,12 @@
-/*import { db } from "$lib/server/database/client";
- import { estudiantes } from "$lib/server/database/schema";
+import { redirect } from '@sveltejs/kit';
 
-export const load= async()=>{
-    let Tabla = await db.select().from(estudiantes) 
-    console.log(estudiantes)
-    return {estudiantes}
-}*/
+
+export const load = async ({ locals }) => {
+    if (!locals.user) {
+        throw redirect(302, '/login');
+    }
+
+    return {
+        user: locals.user // Asegúrate de que estás pasando el usuario aquí
+    };
+};
