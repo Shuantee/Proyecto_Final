@@ -1,7 +1,11 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
-	
+	import { page } from '$app/stores';
 	let ver = false;
+
+	import type { ActionData } from './$types';
+
+	let { form }: { form: ActionData } = $props();
 	
   </script>
   
@@ -86,4 +90,7 @@
 		</div>
 	  </div>
 	</div>
+	<form method="POST" action="?/logout">
+		<button type="submit">Cerrar sesión</button>
+	</form>
   </section>

@@ -1,13 +1,11 @@
 import { fail, redirect } from '@sveltejs/kit';
-import { estudiantes } from '$lib/server/database/schema.js';
+import { estudiantes } from '$lib/server/database/schema';
 import { eq } from 'drizzle-orm';
 import { createSession } from '$lib/server/database/auth.js';
 import type { Cookies } from '@sveltejs/kit';
 import { db } from '$lib/server/database/client';
-import { bcrypt } from 
 
-
-export const load = async () => {};
+export const load = async() => {};
 
 export const actions = {
 	login: async ({ request, cookies }: { request: Request; cookies: Cookies }) => {
@@ -39,12 +37,12 @@ export const actions = {
 			return fail(400, { credentials: true });
 		}
 
-        const sessionToken = crypto.getRandomValues()
+		const sessionToken = crypto.randomUUID();
 
 
 		await db
 			.update(estudiantes)
-			.set({ pin: sessionToken })
+			.set({ token: sessionToken })
 			.where(eq(estudiantes.correo, data.email));
 
 		cookies.set('session', sessionToken, {

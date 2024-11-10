@@ -1,10 +1,32 @@
-import { getSession } from '$lib/server/database/auth';
-import type { Handle } from '@sveltejs/kit';
+import { db } from '$lib/server/database/client'
+import { estudiantes } from '$lib/server/database/schema'
+import { eq } from 'drizzle-orm'
 
-export const handle: Handle = async ({ event, resolve }) => {
-    const session = getSession(event.cookies);
-    event.locals.user = session;
-    
-    const response = await resolve(event);
-    return response;
-};
+
+export const handle = async ({ event, resolve }) => {
+
+    const session = event.cookies.get('session')
+
+    if (!session) {
+        // if there is no session load page as normal
+        console.log('no se encuentra sesión');
+        return await resolve(event)
+    }
+
+    const user = await db.select().from(estudiantes).where(eq(estudiantes.token, session));
+
+    if (!user || user.length === 0) {
+        // if the session is invalid, remove the cookie and load page as normal
+        event.cookies.set('session', '', {
+            path: '/',
+            expires: new Date(0),
+          }
+        )
+        return await resolve(event)    
+    }
+    console.log(user);
+
+    event.locals.user = user[0]
+
+    return await resolve(event)
+}
