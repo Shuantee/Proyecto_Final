@@ -9,10 +9,11 @@ export const load = async ({ locals }) => {
         throw redirect(302, '/login');
     }
 
+
     // Cargar las quejas del usuario
     const userQuejas = await db.select()
         .from(quejas)
-        .where(eq(quejas.idEstudiante, locals.user.id));
+        .where(eq(quejas.idEstudiante, locals.user.idEstudiante));
 
     return {
         quejas: userQuejas
@@ -20,31 +21,31 @@ export const load = async ({ locals }) => {
 };
 
 export const actions = {
-    agregarQueja: async ({ request, locals }) => {
+    quejas: async ({ request, locals }) => {
         if (!locals.user) {
             throw redirect(302, '/login');
         }
-
         const data = await request.formData();
         const fecha = data.get('fecha');
         const alimento = data.get('alimento');
         const tipoQueja = data.get('tipoQueja');
         const problema = data.get('problema');
-
-        if (!fecha || !alimento || !tipoQueja || !problema) {
+        console.log(data)
+        if (!alimento || !tipoQueja || !problema) {
             return fail(400, { error: 'Todos los campos son requeridos' });
         }
-
-        const nuevaQueja = {
-            idEstudiante: locals.user.id,
-            fecha: String(fecha),
+        console.log("Registrando queja:");
+        type Queja = typeof quejas.$inferInsert
+        const nuevaQueja:Queja = {
+            idEstudiante: locals.user.idEstudiante,
+            fecha: String(new Date()),
             alimento: String(alimento),
             tipoQueja: String(tipoQueja),
             problema: String(problema),
         };
-
         try {
             await db.insert(quejas).values(nuevaQueja);
+            console.log("Queja registrada:", nuevaQueja);
             return { success: true };
         } catch (error) {
             console.error("Error al insertar la queja:", error);

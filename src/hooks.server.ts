@@ -8,7 +8,7 @@ export const handle = async ({ event, resolve }) => {
 
     const session = event.cookies.get('session')
     event.locals.user = session;
-    
+
 
 
     if (!session) {
@@ -26,9 +26,9 @@ export const handle = async ({ event, resolve }) => {
             expires: new Date(0),
           }
         )
-        return await resolve(event)    
+        return await resolve(event)
     }
-    console.log(user);
+
 
     event.locals.user = user[0]
 
